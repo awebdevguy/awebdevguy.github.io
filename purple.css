@@ -1,0 +1,20 @@
+:root {
+    --mainColor: #e5ccf4;
+    --secondaryColor: #a080e1;
+
+    --borderColor: #3e1a24;
+
+    --mainText: black;
+    /* --secondaryText: black; */
+
+    --highlight: blue;
+
+    --linkColor: #17a2b8;
+
+    --boxBGColor: oldlace;
+
+    --box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
+    --submitButtonBGColor: black;
+    --submitButtonTextColor: #e5ccf4;
+}
