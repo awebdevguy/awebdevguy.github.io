@@ -372,12 +372,30 @@ box-shadow: var(--box-shadow);
     border: 2px solid var(--borderColor);
 }
 
-.proj-name, .proj-desc{
+.proj-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1em;
+}
+
+/* .proj-name {
+    padding: 1em 1em .5em 1em;
+    margin: 0;
+    justify-content: space-between;
+} */
+
+/* .code {
+    font-size: 1em;
+    padding: 0 0 1em 1em;
+    margin: 0;
+} */
+
+.proj-desc{
     padding: 1em;
     margin: 0;
 }
 
-.proj-desc{
+.proj-desc {
     padding-top: 0;
 }
 
