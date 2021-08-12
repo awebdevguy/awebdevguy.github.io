@@ -1,8 +1,11 @@
 :root {
-    --mainColor: #e5ccf4;
+    /* --mainColor: #e5ccf4;
     --secondaryColor: #a080e1;
+    --borderColor: #3e1a24; */
 
-    --borderColor: #3e1a24;
+    --mainColor: #FBF4F9;
+    --secondaryColor: #F6E7E6;
+    --borderColor: #F6E5f5;
 
     --mainText: black;
     /* --secondaryText: black; */
