@@ -3,13 +3,13 @@
 */
 var m = document.getElementById("menu");
 var h = document.getElementById("header");
-var sw = screen.width;
+var bw = window.innerWidth;
 
 function toggleMenu() {    
     if (m.style.display === "block" || m.style.display === "flex") {
         displayNone();
     } else {
-        if(sw < 800) {
+        if(bw < 800) {
             displayBlock();
         } else {
             displayFlex();
@@ -18,7 +18,7 @@ function toggleMenu() {
 }
 
 function hideMenu() {
-    if(sw < 800) {
+    if(bw < 800) {
         displayNone();
     } else {
         displayFlex();

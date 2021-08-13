@@ -464,12 +464,17 @@ footer h6{
 }
 
 @media screen and (max-width: 1200px) {
+
     .main-container {
         width: 95%;
     }
 }
 
 @media screen and (max-width: 800px) {
+    
+    #header, #menu {
+        display: block;
+    }
 
     .intro-wrapper{
         grid-template-columns: 1fr;
