@@ -411,6 +411,10 @@ box-shadow: var(--box-shadow);
     box-shadow: var(--box-shadow);
 }
 
+/* #contact-title {
+    margin-bottom: 1em;
+} */
+
 #contact-form{
     max-width: 600px;
     display: block;
@@ -418,7 +422,7 @@ box-shadow: var(--box-shadow);
     padding: 2em;
     border-radius: 5px;
     background-color: var(--boxBGColor);
-    border: 3px solid var(--borderColor);
+    border: 2px solid var(--borderColor);
     box-shadow: var(--box-shadow);
 }
 
@@ -429,7 +433,6 @@ box-shadow: var(--box-shadow);
     background-color: whitesmoke;
     border-radius: 5px;
     border: 2px solid var(--borderColor) ;
-    font-size: 1em;
 }
 
 #contact-form label{
@@ -445,11 +448,19 @@ box-shadow: var(--box-shadow);
     background-color: var(--secondaryColor);
     color: black;
     width: 100%;
-    height: 3em;
+    height: 2em;
     border: 2px solid var(--borderColor);
     border-radius: 5px;
     box-shadow: var(--box-shadow);
     font-size: 1em;
+}
+
+#submit-btn:hover {
+    background-color: var(--borderColor);
+}
+
+#submit-btn:active {
+    transform: translateY(4px);
 }
 
 footer h6{
