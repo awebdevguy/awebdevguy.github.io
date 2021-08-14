@@ -102,6 +102,7 @@ window.addEventListener( "load", function () {
             if(event.target.responseText) {
                 alert( "Your email was sent successfully to Les, Thank you.");
             }
+            resetContactForm();
         } );
     
         // Define what happens in case of error
@@ -126,6 +127,10 @@ window.addEventListener( "load", function () {
       sendData();
     } );
   } );
+
+  function resetContactForm() {
+    document.getElementById("contact-form").reset();
+  }
 
   document.body.classList.add("flat-square-mode");
   

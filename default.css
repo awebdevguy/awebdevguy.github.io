@@ -311,7 +311,7 @@ box-shadow: var(--box-shadow);
 }
 
 .highlight{
-    color: var(--highlight);
+    /* color: var(--highlight); */
 }
 
 #about-me {
