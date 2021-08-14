@@ -15,8 +15,18 @@
 
     --box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 
+    --border-radius: 5px;
+    --border: 3px solid var(--borderColor);
+
+
     --submitButtonBGColor: black;
     --submitButtonTextColor: white;
+}
+
+.flat-square-mode {
+    --box-shadow: none;
+    --border-radius: none;
+    --border: 1px solid var(--borderColor);
 }
 
 *{
@@ -128,16 +138,19 @@ box-shadow: var(--box-shadow);
 .s1, .s3{
     background-color: var(--mainColor);
     padding-bottom: 5em;
+    border: var(--border);
 }
 
 .s3{
-    border-top: 1em solid var(--borderColor);
+    /* border-top: 1em solid var(--borderColor); */
+    border: var(--border);
     padding-bottom: 4em;
 }
 
 .s2, .s4{
     background-color: var(--secondaryColor);
-    border-top: 1em solid var(--borderColor);
+    border: var(--border);
+    /* border-top: 1em solid var(--borderColor); */
     padding-bottom: 2em;
 }
 
@@ -166,7 +179,8 @@ box-shadow: var(--box-shadow);
 .intro-wrapper {
     background-color: var(--secondaryColor);
     border: 1px solid var(--borderColor);
-    border-radius: 5px 5px 0 0;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -182,7 +196,8 @@ box-shadow: var(--box-shadow);
     grid-area: nav-wrapper;
     border-bottom: 1px solid var(--borderColor);
     background-color: var(--mainColor);
-    border-radius: 5px 5px 0 0;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
     padding-inline: 1em;
 }
 
@@ -193,7 +208,7 @@ box-shadow: var(--box-shadow);
 .browser-dot{
     height: 1em;
     width: 1em;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     margin: .3em;
 }
 
@@ -231,8 +246,8 @@ box-shadow: var(--box-shadow);
     height: 300px;
     max-width: 75%;
     object-fit: cover;
-    border: 3px solid var(--borderColor);
-    border-radius: 5px;
+    border: var(--border);
+    border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
 }
 
@@ -246,8 +261,8 @@ box-shadow: var(--box-shadow);
     height: 2em;
     width: 2em;
     background-color: green;
-    border: 2px solid lightgray;
-    border-radius: 50%;
+    border: 1px solid lightgray;
+    /* border-radius: 50%; */
     margin: 0 1em;
     cursor: pointer;
 }
@@ -286,13 +301,13 @@ box-shadow: var(--box-shadow);
 #preview{
     max-width: 75%;
     min-height: 300px;
-    border: 3px solid var(--borderColor);
-    border-radius: 5px;
     margin: 4.5em auto;
     padding: 0 1em 1em;
     background-color: var(--boxBGColor);
     text-align: center;
     box-shadow: var(--box-shadow);
+    border: var(--border);
+    border-radius: var(--border-radius);
 }
 
 .highlight{
@@ -300,11 +315,11 @@ box-shadow: var(--box-shadow);
 }
 
 #about-me {
-    border: 3px solid var(--borderColor);
-    border-radius: 5px;
     padding: 1em 2em;
     background-color: var(--boxBGColor);
     box-shadow: var(--box-shadow);
+    border: var(--border);
+    border-radius: var(--border-radius);
 }
 
 #resume-btn {
@@ -312,11 +327,11 @@ box-shadow: var(--box-shadow);
     width: 10em;
     font-size: 1em;
     font-weight: bold;
-    border-radius: 5px;
-    box-shadow: var(--box-shadow);
     color: var(--linkColor);
     background-color: var(--boxBGColor);
-    border: 3px solid var(--borderColor);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
     cursor: pointer;
 }
 
@@ -339,11 +354,11 @@ box-shadow: var(--box-shadow);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     background-color: var(--boxBGColor);
-    box-shadow: var(--box-shadow);
-    border-radius: 5px;
     margin-bottom: 3em;
     margin-right: 1em;
-    border: 3px solid var(--borderColor);
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
 }
 
 #projects-wrapper{
@@ -355,8 +370,10 @@ box-shadow: var(--box-shadow);
 
 .project{
     margin: 1em;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+    border: var(--border);
+    background-color: var(--secondaryColor);
 }
 
 .image-container{
@@ -373,11 +390,11 @@ box-shadow: var(--box-shadow);
 .proj-image{
     width: 100%;
     height: 200px;
-    margin: 2px auto;
+    margin: auto;
     object-fit: cover;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border: 2px solid var(--borderColor);
+    border-top-right-radius: var(--border-radius);
+    border-top-left-radius: var(--border-radius);
+    border: 0;
 }
 
 .proj-title {
@@ -407,7 +424,7 @@ box-shadow: var(--box-shadow);
 .read-more-btn {
     background-color: var(--mainColor);
     border-width: 1px;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
 }
 
@@ -420,10 +437,10 @@ box-shadow: var(--box-shadow);
     display: block;
     margin: 3em auto auto auto;
     padding: 2em;
-    border-radius: 5px;
     background-color: var(--boxBGColor);
-    border: 2px solid var(--borderColor);
+    border: var(--border);
     box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
 }
 
 .input-field{
@@ -431,8 +448,8 @@ box-shadow: var(--box-shadow);
     padding: 1em auto;
     margin-bottom: 10px;
     background-color: whitesmoke;
-    border-radius: 5px;
-    border: 2px solid var(--borderColor) ;
+    border-radius: var(--border-radius);
+    border: var(--border);
 }
 
 #contact-form label{
@@ -449,8 +466,8 @@ box-shadow: var(--box-shadow);
     color: black;
     width: 100%;
     height: 2em;
-    border: 2px solid var(--borderColor);
-    border-radius: 5px;
+    border: var(--border);
+    border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     font-size: 1em;
 }
@@ -468,9 +485,9 @@ footer h6{
     background-color: var(--mainColor);
     margin: 0;
     text-align: center;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border: 3px solid var(--borderColor);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    border: var(--border);
     box-shadow: var(--box-shadow);
 }
 

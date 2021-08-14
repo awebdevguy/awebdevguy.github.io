@@ -126,4 +126,6 @@ window.addEventListener( "load", function () {
       sendData();
     } );
   } );
+
+  document.body.classList.add("flat-square-mode");
   
