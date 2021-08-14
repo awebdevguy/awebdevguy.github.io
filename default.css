@@ -1,26 +1,18 @@
 :root {
     --mainColor: #eaeaea;
     --secondaryColor: #fff;
-
     --borderColor: #c1c1c1;
 
     --mainText: black;
     --secondaryText: #4b5156;
-
-    --highlight: blue;
 
     --linkColor: #17a2b8;
 
     --boxBGColor: oldlace;
 
     --box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-
     --border-radius: 5px;
     --border: 3px solid var(--borderColor);
-
-
-    --submitButtonBGColor: black;
-    --submitButtonTextColor: white;
 }
 
 .flat-square-mode {
@@ -29,7 +21,7 @@
     --border: 1px solid var(--borderColor);
 }
 
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -134,15 +126,12 @@ color: var(--mainText);
 box-shadow: var(--box-shadow);
 }
 
-.s1, .s3 {
-    background-image: url("./images/Slanted-Gradient.svg");
-    background-size: cover;
-}
-
 .s1, .s3{
     background-color: var(--mainColor);
     padding-bottom: 5em;
     border: var(--border);
+    background-image: url("./images/Slanted-Gradient.svg");
+    background-size: cover;
 }
 
 .s1s3-title {
@@ -150,7 +139,6 @@ box-shadow: var(--box-shadow);
 }
 
 .s3{
-    /* border-top: 1em solid var(--borderColor); */
     border: var(--border);
     padding-bottom: 4em;
 }
@@ -158,7 +146,6 @@ box-shadow: var(--box-shadow);
 .s2, .s4{
     background-color: var(--secondaryColor);
     border: var(--border);
-    /* border-top: 1em solid var(--borderColor); */
     padding-bottom: 2em;
 }
 
@@ -216,7 +203,6 @@ box-shadow: var(--box-shadow);
 .browser-dot{
     height: 1em;
     width: 1em;
-    border-radius: 50%;
     margin: .3em;
 }
 
@@ -270,7 +256,6 @@ box-shadow: var(--box-shadow);
     width: 2em;
     background-color: green;
     border: 1px solid lightgray;
-    /* border-radius: 50%; */
     margin: 0 1em;
     cursor: pointer;
 }
@@ -316,10 +301,6 @@ box-shadow: var(--box-shadow);
     box-shadow: var(--box-shadow);
     border: var(--border);
     border-radius: var(--border-radius);
-}
-
-.highlight{
-    /* color: var(--highlight); */
 }
 
 #about-me {
@@ -442,10 +423,6 @@ box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
 }
-
-/* #contact-title {
-    margin-bottom: 1em;
-} */
 
 #contact-form{
     max-width: 600px;

@@ -6,18 +6,4 @@
     --mainColor: #FBF4F9;
     --secondaryColor: #F6E7E6;
     --borderColor: #e5ccf4;
-
-    --mainText: black;
-    /* --secondaryText: black; */
-
-    --highlight: blue;
-
-    --linkColor: #17a2b8;
-
-    --boxBGColor: oldlace;
-
-    --box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-
-    --submitButtonBGColor: black;
-    --submitButtonTextColor: #e5ccf4;
 }

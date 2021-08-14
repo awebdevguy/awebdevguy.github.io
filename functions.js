@@ -44,17 +44,6 @@ function displayNone() {
     m.style.display = "none";
 }
 
-/** 
- * Changes color theme and saves it to local storage
- */
-let theme = localStorage.getItem('theme');
-
-if(theme == null){
-    changeTheme(document.getElementById('light-mode'));
-} else {
-    changeTheme(document.getElementById(theme));
-}
-
 function changeTheme(theme) {
     var cssFile;
     switch(theme.id) {
@@ -133,7 +122,19 @@ window.addEventListener( "load", function () {
     document.getElementById("contact-form").reset();
   }
 
-  document.body.classList.add("flat-square-mode");
-  m.style.display = "none";
+/** 
+ * Changes color theme and saves it to local storage
+ */
+let theme = localStorage.getItem('theme');
+
+if(theme == null){
+    changeTheme(document.getElementById('light-mode'));
+} else {
+    changeTheme(document.getElementById(theme));
+}
+
+document.body.classList.add("flat-square-mode");
+
+m.style.display = "none";
 
   
