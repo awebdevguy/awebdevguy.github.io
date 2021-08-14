@@ -12,13 +12,19 @@
 
     --box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     --border-radius: 5px;
-    --border: 3px solid var(--borderColor);
+    --border: 1px solid var(--borderColor);
+    --background-image: url("./images/Liquid-Cheese.svg");;
+    --s1s3-title-color: black;
+    --dot-radius: 50%;
 }
 
 .flat-square-mode {
     --box-shadow: none;
     --border-radius: none;
     --border: 1px solid var(--borderColor);
+    --background-image: url("./images/Slanted-Gradient.svg");
+    --s1s3-title-color: var(--mainColor);
+    --dot-radius: none;
 }
 
 * {
@@ -130,12 +136,12 @@ box-shadow: var(--box-shadow);
     background-color: var(--mainColor);
     padding-bottom: 5em;
     border: var(--border);
-    background-image: url("./images/Slanted-Gradient.svg");
+    background-image: var(--background-image);
     background-size: cover;
 }
 
 .s1s3-title {
-    color: var(--mainColor);
+    color: var(--s1s3-title-color);
 }
 
 .s3{
@@ -204,6 +210,7 @@ box-shadow: var(--box-shadow);
     height: 1em;
     width: 1em;
     margin: .3em;
+    border-radius: var(--dot-radius);
 }
 
 #dot-1{
@@ -254,13 +261,13 @@ box-shadow: var(--box-shadow);
 .theme-dot{
     height: 2em;
     width: 2em;
-    background-color: green;
     border: 1px solid lightgray;
+    border-radius: var(--dot-radius);
     margin: 0 1em;
     cursor: pointer;
 }
 
-.theme-dot:hover{
+.theme-dot:hover, #flat-3D:hover{
     border-width: 3px;
 }
 
@@ -280,11 +287,15 @@ box-shadow: var(--box-shadow);
     background-color: #F6E7e6;
 }
 
-#settings-note{
-    font-size: .8em;
-    font-style: italic;
+#flat-3D {
+    width: 6em;
+    height: 2em;
     text-align: center;
-    padding-top: .5em;
+    line-height: 2em;
+    border: 1px solid lightgray;
+    margin: 0 1em;
+    cursor: pointer;
+    font-family: 'Roboto Mono', sans-serif;
 }
 
 .right-column {
@@ -475,6 +486,14 @@ box-shadow: var(--box-shadow);
 
 .contact-btn:active {
     transform: translateY(4px);
+}
+
+#cancel-btn {
+    margin-right: .5em;
+}
+
+#submit-btn {
+    margin-left: .5em;
 }
 
 footer h6{

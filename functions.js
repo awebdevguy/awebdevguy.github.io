@@ -133,7 +133,20 @@ if(theme == null){
     changeTheme(document.getElementById(theme));
 }
 
-document.body.classList.add("flat-square-mode");
+function toggleFlat(element) {
+
+    var button = document.getElementById(element.id);
+
+    if(document.body.classList.contains("flat-square-mode")) {
+        document.body.classList.remove("flat-square-mode");
+
+        button.innerHTML = "Go Flat";
+    } else {
+        document.body.classList.add("flat-square-mode");
+
+        button.innerHTML = "Go 3D";
+    }
+}
 
 m.style.display = "none";
 
