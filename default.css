@@ -208,7 +208,7 @@ box-shadow: var(--box-shadow);
 .browser-dot{
     height: 1em;
     width: 1em;
-    /* border-radius: 50%; */
+    border-radius: 50%;
     margin: .3em;
 }
 
@@ -324,7 +324,8 @@ box-shadow: var(--box-shadow);
 
 #resume-btn {
     height: 3em;
-    width: 10em;
+    width: 100%;
+    align-self: center;
     font-size: 1em;
     font-weight: bold;
     color: var(--linkColor);
@@ -333,6 +334,10 @@ box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     cursor: pointer;
+}
+
+#resume-btn:hover {
+    border-width: 3px;
 }
 
 #competency-wrapper{
@@ -344,10 +349,12 @@ box-shadow: var(--box-shadow);
 
 #core-skills-wrapper{
     grid-area: core-skills-wrapper;
+    margin-right: .5em;
 }
 
 #familiarities-wrapper{
     grid-area: familiarities-wrapper;
+    margin-left: .5em;
 }
 
 #core-skills, #familiarities{
@@ -355,7 +362,7 @@ box-shadow: var(--box-shadow);
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     background-color: var(--boxBGColor);
     margin-bottom: 3em;
-    margin-right: 1em;
+    /* margin-right: 1em; */
     border: var(--border);
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
@@ -450,6 +457,7 @@ box-shadow: var(--box-shadow);
     background-color: whitesmoke;
     border-radius: var(--border-radius);
     border: var(--border);
+    font-size: 1em;
 }
 
 #contact-form label{
@@ -460,7 +468,11 @@ box-shadow: var(--box-shadow);
     height: 13em;
 }
 
-#submit-btn{
+#btn-wrapper {
+    display: flex;
+}
+
+.contact-btn {
     margin-top: 1em;
     background-color: var(--secondaryColor);
     color: black;
@@ -472,11 +484,11 @@ box-shadow: var(--box-shadow);
     font-size: 1em;
 }
 
-#submit-btn:hover {
-    background-color: var(--borderColor);
+.contact-btn:hover {
+    border-width: 3px ;
 }
 
-#submit-btn:active {
+.contact-btn:active {
     transform: translateY(4px);
 }
 

@@ -39,7 +39,7 @@
     <section class="s1" id="home">
       <div class="main-container">
         <div class="greeting-wrapper">
-            <h1>Hi, I'm <span id="greeting-first-name" class="highlight">Les</span> Quines</h1>
+            <h1>Hi, &#160;&#160;I'm <span id="greeting-first-name" class="highlight">Les</span> Quines</h1>
         </div>
 
         <div class="intro-wrapper">
@@ -98,11 +98,11 @@
                 <p>Oh, and by the way the most important thing, I am down to earth, easy to talk to and I get along really well with everybody. Thank you for taking the time to find out more of who I am and what I do.</p>
                 <p>Thanks again,<br>Les</p>
             </div>
-            <br>
-            <br>
-            <hr>
-            <br>
-            <p><a target="_blank" href="./webdev_resume.pdf"><button id="resume-btn" >My Resume</button></a></p>
+            <!-- <br> -->
+            <!-- <br> -->
+            <!-- <hr> -->
+            <!-- <br> -->
+            <p style="text-align: center;"><a target="_blank" href="./webdev_resume.pdf"><button id="resume-btn" >My Resume</button></a></p>
 
             <div id="competency-wrapper">
                 <div id="core-skills-wrapper">
@@ -278,7 +278,10 @@
                 <input id="subject" class="input-field" type="text" name="subject">
                 <label for="message">Message</label>
                 <textarea id="message" class="input-field" type="text" name="message"></textarea>
-                <input id="submit-btn" type="submit" value="Send">
+                <div id="btn-wrapper">
+                    <button class="contact-btn" id="cancel-btn" type="button" onclick="resetContactForm()">Cancel</button>
+                    <input class="contact-btn" id="submit-btn" type="submit" value="Send"></input>
+                </div>
             </form>
 
         </div>
