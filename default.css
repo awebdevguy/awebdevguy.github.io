@@ -511,6 +511,20 @@ footer h6{
     box-shadow: var(--box-shadow);
 }
 
+#footer {
+    background-color: black;
+}
+
+mark.red {
+    color:#ff0000;
+    background: none;
+}
+
+mark.white {
+    color:#fff;
+    background: none;
+}
+
 @media screen and (max-width: 1200px) {
 
     .main-container {
