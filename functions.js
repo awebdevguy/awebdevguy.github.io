@@ -26,6 +26,7 @@ function hideMenu() {
 }
 
 function displayBlock() {
+    h.style.display = "block";
     m.style.display = "block";
 }
 
@@ -133,5 +134,6 @@ window.addEventListener( "load", function () {
   }
 
   document.body.classList.add("flat-square-mode");
+  m.style.display = "none";
 
   
