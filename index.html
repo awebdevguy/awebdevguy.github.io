@@ -262,14 +262,16 @@
             <h3 id="contact-title" class="section-title">Contact</h3>
             <p style="text-align: center; margin: 0;"><a href="mailto:les.quines@gmail.com?subject=Contact Requested">les.quines@gmail.com</a></p>
             <form id="contact-form">
-                <label for="name">Name</label>
-                <input id="name" class="input-field" type="text" name="name">
-                <label for="email">Email</label>
-                <input id="email" class="input-field" type="text" name="email">
+                <label style="float: right;"><mark class="red">*</mark> Required</label>
+                <br>
+                <label for="name">Name <mark class="red">*</mark></label>
+                <input id="name" class="input-field" type="text" name="name" required>
+                <label for="email">Email <mark class="red">*</mark></label>
+                <input id="email" class="input-field" type="email" name="email" required >
                 <label for="subject">Subject</label>
                 <input id="subject" class="input-field" type="text" name="subject">
-                <label for="message">Message</label>
-                <textarea id="message" class="input-field" type="text" name="message"></textarea>
+                <label for="message">Message <mark class="red">*</mark></label>
+                <textarea id="message" class="input-field" type="text" name="message" required></textarea>
                 <div id="btn-wrapper">
                     <button class="contact-btn" id="cancel-btn" type="button" onclick="resetContactForm()">Cancel</button>
                     <button class="contact-btn" id="submit-btn" type="submit">Send</button>
