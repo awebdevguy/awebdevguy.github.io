@@ -56,8 +56,7 @@ h3,
 h4,
 h5,
 h6,
-strong,
-#greeting-first-name {
+strong {
     color: var(--mainText);
     font-family: 'Russo One', sans-serif;
     font-weight: 500;
@@ -135,10 +134,19 @@ color: var(--mainText);
 box-shadow: var(--box-shadow);
 }
 
+.s1, .s3 {
+    background-image: url("./images/Slanted-Gradient.svg");
+    background-size: cover;
+}
+
 .s1, .s3{
     background-color: var(--mainColor);
     padding-bottom: 5em;
     border: var(--border);
+}
+
+.s1s3-title {
+    color: var(--mainColor);
 }
 
 .s3{
@@ -325,6 +333,7 @@ box-shadow: var(--box-shadow);
 #resume-btn {
     height: 3em;
     width: 100%;
+    margin-bottom: 3em;
     align-self: center;
     font-size: 1em;
     font-weight: bold;
@@ -362,7 +371,6 @@ box-shadow: var(--box-shadow);
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     background-color: var(--boxBGColor);
     margin-bottom: 3em;
-    /* margin-right: 1em; */
     border: var(--border);
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
