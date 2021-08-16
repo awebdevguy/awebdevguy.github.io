@@ -45,7 +45,11 @@ label,
 input,
 textarea {
     color: var(--mainText);
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+p {
+    font-weight: 300;
 }
 
 h1,
@@ -57,7 +61,6 @@ h6,
 strong {
     color: var(--mainText);
     font-family: 'Russo One', sans-serif;
-    font-weight: 500;
 }
 
 a {
@@ -308,7 +311,7 @@ box-shadow: var(--box-shadow);
     max-width: 75%;
     min-height: 300px;
     margin: 4.5em auto;
-    padding: 0 1em 1em;
+    padding: 0 2rem;
     background-color: var(--boxBGColor);
     text-align: center;
     box-shadow: var(--box-shadow);
@@ -317,7 +320,7 @@ box-shadow: var(--box-shadow);
 }
 
 #about-me {
-    padding: 1em 2em;
+    padding: 1rem 6rem;
     background-color: var(--boxBGColor);
     box-shadow: var(--box-shadow);
     border: var(--border);
@@ -541,6 +544,10 @@ mark.white {
         display: block;
     }
 
+    #preview {
+        padding: 0 1rem 1rem 1rem;
+    }
+
     .intro-wrapper{
         display: block;
         grid-template-columns: 1fr;
@@ -557,6 +564,10 @@ mark.white {
 
     #flat-3D {
         margin: 0 .5rem;
+    }
+
+    #about-me {
+        padding: 1rem;
     }
 
     #competency-wrapper{
