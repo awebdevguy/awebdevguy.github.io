@@ -140,11 +140,11 @@ function toggleFlat(element) {
     if(document.body.classList.contains("flat-square-mode")) {
         document.body.classList.remove("flat-square-mode");
 
-        button.innerHTML = "Go Flat";
+        button.innerHTML = "Flat";
     } else {
         document.body.classList.add("flat-square-mode");
 
-        button.innerHTML = "Go 3D";
+        button.innerHTML = "3D";
     }
 }
 
