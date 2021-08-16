@@ -3,9 +3,27 @@
 */
 var m = document.getElementById("menu");
 var h = document.getElementById("header");
-var bw = window.innerWidth;
+var bw = document.documentElement.clientWidth;
 
-function toggleMenu() {    
+
+/** 
+ * Changes color theme and saves it to local storage
+ */
+let theme = localStorage.getItem('theme');
+
+if(theme == null){
+     changeTheme(document.getElementById('light-mode'));
+} else {
+     changeTheme(document.getElementById(theme));
+}
+
+// hide the menu list on load
+m.style.display = "none";
+
+function toggleMenu(e) {  
+    
+    bw = document.documentElement.clientWidth;
+    
     if (m.style.display === "block" || m.style.display === "flex") {
         displayNone();
     } else {
@@ -27,7 +45,12 @@ function hideMenu() {
 
 function displayBlock() {
     h.style.display = "block";
+    h.style.justifyContent = "initial";
     m.style.display = "block";
+    m.style.position = "initial";
+    m.style.top = "auto";
+    m.style.justifyContent = "initial";
+    m.style.right = "auto";
 }
 
 function displayFlex() {
@@ -113,7 +136,6 @@ window.addEventListener( "load", function () {
     // ...and take over its submit event.
     form.addEventListener( "submit", function ( event ) {
       event.preventDefault();
-  
       sendData();
     } );
   } );
@@ -121,17 +143,6 @@ window.addEventListener( "load", function () {
   function resetContactForm() {
     document.getElementById("contact-form").reset();
   }
-
-/** 
- * Changes color theme and saves it to local storage
- */
-let theme = localStorage.getItem('theme');
-
-if(theme == null){
-    changeTheme(document.getElementById('light-mode'));
-} else {
-    changeTheme(document.getElementById(theme));
-}
 
 function toggleFlat(element) {
 
@@ -148,6 +159,15 @@ function toggleFlat(element) {
     }
 }
 
-m.style.display = "none";
+function setDisplay(e) {
+    if(e.target.innerWidth < 800) {
+        displayBlock();
+    } else {
+        displayFlex();
+    }
+    m.style.display = "none";
+}
 
-  
+window.addEventListener('resize', (e) => {
+    setDisplay(e);
+})
