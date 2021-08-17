@@ -387,6 +387,7 @@ box-shadow: var(--box-shadow);
 }
 
 .project{
+    max-width: 300px;
     margin: 1em;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
@@ -408,7 +409,7 @@ box-shadow: var(--box-shadow);
 
 .proj-image{
     width: 100%;
-    height: 200px;
+    /* height: 200px; */
     margin: auto;
     object-fit: cover;
     border-top-right-radius: var(--border-radius);
@@ -459,7 +460,7 @@ box-shadow: var(--box-shadow);
     background-color: transparent;
     /* background-color: var(--boxBGColor); */
     height: 3rem;
-    width: 50%;
+    max-width: 600px;
     line-height: 1rem;
     padding: 1rem;
     margin: 0 auto;
