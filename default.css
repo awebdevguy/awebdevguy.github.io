@@ -16,6 +16,7 @@
     --background-image: url("./images/Liquid-Cheese.svg");;
     --s1s3-title-color: black;
     --dot-radius: 50%;
+    --headFootBGColor: black;
 }
 
 .flat-square-mode {
@@ -28,6 +29,7 @@
     --mainText: var(--mainColor);
     --linkColor: rgb(240, 243, 46);
     --markColor: rgb(240, 243, 46);
+    --headFootBGColor: var(--headFootBGColor);
 }
 
 * {
@@ -108,7 +110,7 @@ h6 {
 /* Style the navigation menu */
 #header {
     overflow:hidden;
-    background-color: transparent;
+    background-color: var(--headFootBGColor);
     /* background-color: var(--secondaryColor); */
     position: sticky;
     top: 0;
@@ -123,7 +125,7 @@ h6 {
   
 /* Style navigation menu links */
 #header a {
-color: var(--mainText);
+color: var(--mainColor);
 padding: 14px 32px;
 text-decoration: none;
 font-size: 17px;
@@ -141,7 +143,7 @@ top: 0;
 /* Add a background color on mouse-over */
 #header a:hover{
 background-color: var(--boxBGColor);
-color: var(--mainText);
+color: var(--mainColor);
 box-shadow: var(--box-shadow);
 }
 
@@ -540,7 +542,7 @@ footer h6{
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: transparent;
+    background-color: var(--headFootBGColor);
     /* background-color: var(--mainColor); */
     margin: 0;
     text-align: center;
@@ -550,10 +552,10 @@ footer h6{
     box-shadow: var(--box-shadow);
 }
 
-#footer {
+/* #footer {
     background-color: transparent;
-    /* background-color: black; */
-}
+    // background-color: black;
+} */
 
 mark.red {
     color:var(--markColor);
