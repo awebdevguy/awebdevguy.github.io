@@ -16,12 +16,7 @@ var bw = document.documentElement.clientWidth;
 //      changeTheme(document.getElementById(theme));
 // }
 
-let isFlat = localStorage.getItem('flat');
 
-if(isFlat === 'true') {
-    document.body.classList.add("flat-square-mode");
-    document.getElementById('flat-3D').innerHTML = '3D Look';
-}
 
 // hide the menu list on load
 m.style.display = "none";
