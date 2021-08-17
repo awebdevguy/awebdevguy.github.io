@@ -29,16 +29,11 @@
     --mainText: var(--mainColor);
     --linkColor: rgb(240, 243, 46);
     --markColor: rgb(240, 243, 46);
-    --headFootBGColor: var(--headFootBGColor);
 }
 
 * {
     box-sizing: border-box;
 }
-
-/* html {
-
-} */
 
 body {
     width: 100%;
