@@ -5,16 +5,22 @@ var m = document.getElementById("menu");
 var h = document.getElementById("header");
 var bw = document.documentElement.clientWidth;
 
-
 /** 
  * Changes color theme and saves it to local storage
  */
-let theme = localStorage.getItem('theme');
+// let theme = localStorage.getItem('theme');
 
-if(theme == null){
-     changeTheme(document.getElementById('light-mode'));
-} else {
-     changeTheme(document.getElementById(theme));
+// if(theme == null) {
+//      changeTheme(document.getElementById('light-mode'));
+// } else {
+//      changeTheme(document.getElementById(theme));
+// }
+
+let isFlat = localStorage.getItem('flat');
+
+if(isFlat === 'true') {
+    document.body.classList.add("flat-square-mode");
+    document.getElementById('flat-3D').innerHTML = '3D Look';
 }
 
 // hide the menu list on load
@@ -67,23 +73,38 @@ function displayNone() {
     m.style.display = "none";
 }
 
-function changeTheme(theme) {
-    var cssFile;
-    switch(theme.id) {
-        case "light-mode":
-            cssFile = "default.css";
-            break;
-        case "blue-mode":
-            cssFile = "blue.css";
-            break;
-        case "green-mode":
-            cssFile = "green.css";
-            break;
-        case "purple-mode":
-            cssFile = "purple.css";
+// function changeTheme(theme) {
+//     var cssFile;
+//     switch(theme.id) {
+//         case "light-mode":
+//             cssFile = "default.css";
+//             break;
+//         case "blue-mode":
+//             cssFile = "blue.css";
+//             break;
+//         case "green-mode":
+//             cssFile = "green.css";
+//             break;
+//         case "purple-mode":
+//             cssFile = "purple.css";
+//     }
+//     document.getElementById("theme-style").href = cssFile;
+//     localStorage.setItem('theme', theme.id);
+// }
+
+function toggleFlat(element) {
+
+    var button = document.getElementById(element.id);
+
+    if(document.body.classList.contains("flat-square-mode")) {
+        document.body.classList.remove("flat-square-mode");
+        button.innerHTML = "Flat Look";
+        localStorage.setItem('flat', 'false');
+    } else {
+        document.body.classList.add("flat-square-mode");
+        button.innerHTML = "3D Look";
+        localStorage.setItem('flat', 'true');
     }
-    document.getElementById("theme-style").href = cssFile;
-    localStorage.setItem('theme', theme.id);
 }
 
 function readMore(index) {
@@ -143,21 +164,6 @@ window.addEventListener( "load", function () {
   function resetContactForm() {
     document.getElementById("contact-form").reset();
   }
-
-function toggleFlat(element) {
-
-    var button = document.getElementById(element.id);
-
-    if(document.body.classList.contains("flat-square-mode")) {
-        document.body.classList.remove("flat-square-mode");
-
-        button.innerHTML = "Flat";
-    } else {
-        document.body.classList.add("flat-square-mode");
-
-        button.innerHTML = "3D";
-    }
-}
 
 function setDisplay(e) {
     if(e.target.innerWidth < 800) {

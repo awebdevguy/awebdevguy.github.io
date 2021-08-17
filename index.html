@@ -25,7 +25,7 @@
   </head>
   <body>
     <nav id="header">
-        <a id="home-link" href="#" onclick="hideMenu()">Home</a>
+        <a id="home-link" href="#top" onclick="hideMenu()">Home</a>
         <div id="menu">
             <a href="#about" onclick="hideMenu()">About Me</a>
             <a target="_blank" href="./webdev_resume.pdf" onclick="hideMenu()">Resume</a>
@@ -59,13 +59,13 @@
             <img id="profile-pic" src="images/profile_banff.jpg" alt="profile picture">
             <!-- <img id="profile-pic" src="images/profile_banff_bw.jpeg" alt="profile picture"> -->
             <!-- <img id="profile-pic" src="images/profile_les_rose.jpg" alt="profile picture"> -->
-            <h5 style="text-align: center; line-height: 0;" >Site Themes</h5>
+            <h5 style="text-align: center; line-height: 0;" >Change Theme</h5>
             <div id="theme-wrapper">
                 <div id="light-mode" class="theme-dot" onclick="changeTheme(this)"></div>
                 <div id="blue-mode" class="theme-dot" onclick="changeTheme(this)"></div>
                 <div id="green-mode" class="theme-dot" onclick="changeTheme(this)"></div>
                 <div id="purple-mode" class="theme-dot" onclick="changeTheme(this)"></div>
-                <div type="button" id="flat-3D" onclick="toggleFlat(this)">Flat</div>
+                <div type="button" id="flat-3D" onclick="toggleFlat(this)">Flat Look</div>
             </div>
 
           </div>
@@ -74,7 +74,7 @@
                 <h3>Who Am I</h3>
                 <p>A veteran and a Canadian Air Force aircraft technician in my past life.</p>
                 <h3>What I Do</h3>
-                <p>Create simply beautiful websites.</p>
+                <p>Create beautiful websites.</p>
             </div>
           </div>
         </div>
@@ -101,7 +101,7 @@
 
             <div id="competency-wrapper">
                 <div id="core-skills-wrapper">
-                    <h4>Core Skills</h4>
+                    <h4 class="skills-title">Core Skills</h4>
 
                     <div id="core-skills">
                         <ul>
@@ -113,7 +113,7 @@
                 </div>
 
                 <div id="familiarities-wrapper">
-                    <h4>Familiarities</h4>
+                    <h4 class="skills-title">Familiarities</h4>
         
                     <div id="familiarities">
                         <ul>
@@ -263,7 +263,10 @@
     <section class="s4" id="contact">
         <div class="main-container">
             <h3 id="contact-title" class="section-title">Contact</h3>
-            <p style="text-align: center; margin: 0;"><a href="mailto:les.quines@gmail.com?subject=Contact Requested">les.quines@gmail.com</a></p>
+            <div id="email-link-container">
+                <p style="text-align: center; margin: 0;"><a href="mailto:les.quines@gmail.com?subject=Contact Requested">les.quines@gmail.com</a></p>
+            </div>
+
             <form id="contact-form">
                 <label style="float: right;"><mark class="red">*</mark> Required</label>
                 <br>
