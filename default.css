@@ -20,15 +20,17 @@
 }
 
 .flat-square-mode {
+    --mainText: var(--mainColor);
+
+    --linkColor: rgb(240, 243, 46);
+    --markColor: rgb(240, 243, 46);
+
     --box-shadow: none;
     --border-radius: none;
     --border: 1px solid var(--borderColor);
     --background-image: url("./images/Slanted-Gradient.svg");
     --s1s3-title-color: var(--mainColor);
     --dot-radius: none;
-    --mainText: var(--mainColor);
-    --linkColor: rgb(240, 243, 46);
-    --markColor: rgb(240, 243, 46);
 }
 
 * {
@@ -56,6 +58,7 @@ textarea {
 
 p {
     font-weight: 400;
+    padding-bottom: 1rem;
 }
 
 h1,
@@ -106,7 +109,6 @@ h6 {
 #header {
     overflow:hidden;
     background-color: var(--headFootBGColor);
-    /* background-color: var(--secondaryColor); */
     position: sticky;
     top: 0;
     border: 1px solid var(--borderColor);
@@ -155,7 +157,6 @@ box-shadow: var(--box-shadow);
 }
 
 .s4{
-    /* padding-bottom: auto; */
     margin-bottom: 8rem;
 }
 
@@ -179,16 +180,15 @@ box-shadow: var(--box-shadow);
 
 .intro-wrapper {
     background-color: transparent;
-    /* background-color: var(--secondaryColor); */
     border: 1px solid var(--borderColor);
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-        'nav-wrapper nav-wrapper'
-        'left-column right-column';
+        'nav-wrapper nav-wrapper nav-wrapper'
+        'left-column right-column right-column';
 }
 
 .nav-wrapper {
@@ -198,7 +198,6 @@ box-shadow: var(--box-shadow);
     grid-area: nav-wrapper;
     border-bottom: 1px solid var(--borderColor);
     background-color: transparent;
-    /* background-color: var(--mainColor); */
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
     padding-inline: 1em;
@@ -232,6 +231,7 @@ box-shadow: var(--box-shadow);
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    padding-left: 0;
 }
 
 #navigation li{
@@ -247,7 +247,7 @@ box-shadow: var(--box-shadow);
     display: block;
     margin: auto;
     height: 300px;
-    max-width: 75%;
+    max-width: 100%;
     object-fit: cover;
     border: var(--border);
     border-radius: var(--border-radius);
@@ -260,47 +260,10 @@ box-shadow: var(--box-shadow);
     margin-bottom: 3em;
 }
 
-/*.theme-dot{
-    height: 2em;
-    width: 2em;
-    border: 1px solid var(--borderColor);
-    border-radius: var(--dot-radius);
-    margin: 0 1em;
-    cursor: pointer;
-}
-
-.theme-dot:hover, #flat-3D:hover{
-    border-width: 3px;
-}
-
-#light-mode{
-    background-color: #fff;
-}
-
-#blue-mode{
-    background-color: #DEECFF;
-}
-
-#green-mode{
-    background-color: #C7CFB7;
-}
-
-#purple-mode{
-    background-color: #F6E7e6;
-} */
-
 #flat-3D {
-    width: 6em;
-    height: 2em;
     text-align: center;
-    line-height: 2em;
-    border: 1px solid var(--borderColor);
-    margin: 0 1em;
     cursor: pointer;
-    font-family: 'Russo One', sans-serif;
-    box-shadow: var(--box-shadow);
-    border-radius: var(--border-radius);
-    color: var(--mainText);
+    color: var(--linkColor);
 }
 
 .right-column {
@@ -308,33 +271,37 @@ box-shadow: var(--box-shadow);
 }
 
 #preview{
-    max-width: 75%;
+    max-width: 95%;
     min-height: 300px;
     margin: 4.5em auto;
     padding: 0 2rem;
     background-color: transparent;
-    /* background-color: var(--boxBGColor); */
     text-align: center;
     box-shadow: var(--box-shadow);
     border: var(--border);
     border-radius: var(--border-radius);
 }
 
+#about-me p {
+    font-weight: 300;
+}
+
 #about-me {
-    padding: 1rem 6rem;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+    padding: 8rem 8rem;
     background-color: transparent;
-    /* background-color: var(--boxBGColor); */
     box-shadow: var(--box-shadow);
     border: var(--border);
     border-radius: var(--border-radius);
 }
 
 #resume-btn {
-    height: 3em;
+    height: 3rem;
     width: 100%;
-    margin-bottom: 3em;
+    margin: 2rem 0;
     align-self: center;
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: bold;
     color: var(--linkColor);
     background-color: var(--boxBGColor);
@@ -349,28 +316,27 @@ box-shadow: var(--box-shadow);
 }
 
 #competency-wrapper{
-    display: grid;
-    grid-template-columns: 1fr, 1fr;
     grid-template-areas: 
     'core-skills-wrapper familiarities-wrapper';
+    grid-gap: 1rem;
+}
+
+.skills-title {
+    margin-bottom: .5rem;
 }
 
 #core-skills-wrapper{
     grid-area: core-skills-wrapper;
-    margin-right: .5em;
 }
 
 #familiarities-wrapper{
     grid-area: familiarities-wrapper;
-    margin-left: .5em;
 }
 
 #core-skills, #familiarities{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     background-color: transparent;
-    /* background-color: var(--boxBGColor); */
-    margin-bottom: 3em;
     border: var(--border);
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
@@ -378,25 +344,23 @@ box-shadow: var(--box-shadow);
 
 #projects-wrapper{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 385px));
     grid-gap: 1em;
     justify-content: center;
 }
 
 .project{
-    max-width: 300px;
     margin: 1em;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     border: var(--border);
     background-color: transparent;
-    /* background-color: var(--secondaryColor); */
 }
 
 .image-container{
-    width: 100%;
-    display: flex;
-    align-content: center;
+    height: 200px;
+    width: 96%;
+    margin: 2%;
 }
 
 .img-link {
@@ -406,11 +370,13 @@ box-shadow: var(--box-shadow);
 
 .proj-image{
     width: 100%;
-    /* height: 200px; */
+    height: 200px;
     margin: auto;
     object-fit: cover;
     border-top-right-radius: var(--border-radius);
     border-top-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
     border: 0;
 }
 
@@ -421,12 +387,8 @@ box-shadow: var(--box-shadow);
 }
 
 .proj-desc{
-    padding: 1em;
+    padding: 0 1em 1em 1em;
     margin: 0;
-}
-
-.proj-desc {
-    padding-top: 0;
 }
 
 .proj-readmore{
@@ -442,7 +404,6 @@ box-shadow: var(--box-shadow);
     line-height: 2rem;
     color: var(--mainText);
     background-color: transparent;
-    /* background-color: var(--mainColor); */
     border-width: 1px;
     border: 1px solid var(--borderColor);
     border-radius: var(--border-radius);
@@ -455,7 +416,6 @@ box-shadow: var(--box-shadow);
 
 #email-link-container {
     background-color: transparent;
-    /* background-color: var(--boxBGColor); */
     height: 3rem;
     max-width: 600px;
     line-height: 1rem;
@@ -472,7 +432,6 @@ box-shadow: var(--box-shadow);
     margin: 3em auto auto auto;
     padding: 2em;
     background-color: transparent;
-    /* background-color: var(--boxBGColor); */
     border: var(--border);
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
@@ -483,7 +442,6 @@ box-shadow: var(--box-shadow);
     padding: 1em auto;
     margin-bottom: 10px;
     background-color: transparent;
-    /* background-color: whitesmoke; */
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     border: 2px solid gray;
@@ -506,8 +464,6 @@ box-shadow: var(--box-shadow);
     line-height: 2rem;
     margin-top: 1em;
     background-color: transparent;
-    /* background-color: var(--secondaryColor); */
-    /* color: black; */
     color: var(--mainText);
     width: 100%;
     border: var(--border);
@@ -534,11 +490,10 @@ box-shadow: var(--box-shadow);
 
 footer h6{
     line-height: 2em;
-    position: fixed;
+    position: static;
     bottom: 0;
     width: 100%;
     background-color: var(--headFootBGColor);
-    /* background-color: var(--mainColor); */
     margin: 0;
     text-align: center;
     border-bottom-left-radius: var(--border-radius);
@@ -546,11 +501,6 @@ footer h6{
     border: var(--border);
     box-shadow: var(--box-shadow);
 }
-
-/* #footer {
-    background-color: transparent;
-    // background-color: black;
-} */
 
 mark.red {
     color:var(--markColor);
@@ -586,15 +536,6 @@ mark.white {
             'nav-wrapper'
             'left-column'
             'right-column';
-    }
-
-    .theme-dot {
-        margin: 0 .5rem;
-
-    }
-
-    #flat-3D {
-        margin: 0 .5rem;
     }
 
     #about-me {

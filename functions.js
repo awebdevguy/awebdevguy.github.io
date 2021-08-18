@@ -5,23 +5,11 @@ var m = document.getElementById("menu");
 var h = document.getElementById("header");
 var bw = document.documentElement.clientWidth;
 
-/** 
- * Changes color theme and saves it to local storage
- */
-// let theme = localStorage.getItem('theme');
-
-// if(theme == null) {
-//      changeTheme(document.getElementById('light-mode'));
-// } else {
-//      changeTheme(document.getElementById(theme));
-// }
-
-
-
 // hide the menu list on load
 m.style.display = "none";
 
-function toggleMenu(e) {  
+// 
+function toggleMenu() {  
     
     bw = document.documentElement.clientWidth;
     
@@ -68,41 +56,23 @@ function displayNone() {
     m.style.display = "none";
 }
 
-// function changeTheme(theme) {
-//     var cssFile;
-//     switch(theme.id) {
-//         case "light-mode":
-//             cssFile = "default.css";
-//             break;
-//         case "blue-mode":
-//             cssFile = "blue.css";
-//             break;
-//         case "green-mode":
-//             cssFile = "green.css";
-//             break;
-//         case "purple-mode":
-//             cssFile = "purple.css";
-//     }
-//     document.getElementById("theme-style").href = cssFile;
-//     localStorage.setItem('theme', theme.id);
-// }
-
 function toggleFlat(element) {
 
-    var button = document.getElementById(element.id);
+    var link = document.getElementById(element.id);
 
     if(document.body.classList.contains("flat-square-mode")) {
         document.body.classList.remove("flat-square-mode");
-        button.innerHTML = "Flat Look";
+        link.innerHTML = "Flat-Theme";
         localStorage.setItem('flat', 'false');
     } else {
         document.body.classList.add("flat-square-mode");
-        button.innerHTML = "3D Look";
+        link.innerHTML = "3D-Theme";
         localStorage.setItem('flat', 'true');
     }
 }
 
 function readMore(index) {
+
     var dots = document.getElementById("dots" + index);
     var moreText = document.getElementById("more" + index);
     var link = document.getElementById("btn" + index);
@@ -120,6 +90,7 @@ function readMore(index) {
 
 //   Contact form send email
 window.addEventListener( "load", function () {
+
     function sendData() {
         const XHR = new XMLHttpRequest();
   
@@ -153,14 +124,16 @@ window.addEventListener( "load", function () {
     form.addEventListener( "submit", function ( event ) {
       event.preventDefault();
       sendData();
-    } );
-  } );
+    });
+});
 
-  function resetContactForm() {
+function resetContactForm() {
+
     document.getElementById("contact-form").reset();
-  }
+}
 
 function setDisplay(e) {
+
     if(e.target.innerWidth < 800) {
         displayBlock();
     } else {
