@@ -24,7 +24,7 @@
 .flat-square-mode {
     --mainText: var(--mainColor);
 
-    --linkColor: rgb(240, 243, 46);
+    --linkColor: rgb(240, 243, 46)
     --markColor: rgb(240, 243, 46);
 
     --box-shadow: none;
