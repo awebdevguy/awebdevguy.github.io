@@ -24,7 +24,7 @@
 .flat-square-mode {
     --mainText: var(--mainColor);
 
-    --linkColor: rgb(240, 243, 46)
+    --linkColor: rgb(240, 243, 46);
     --markColor: rgb(240, 243, 46);
 
     --box-shadow: none;
@@ -346,12 +346,12 @@ box-shadow: var(--box-shadow);
 #projects-wrapper{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 385px));
-    grid-gap: 1em;
     justify-content: center;
+    grid-gap: 1rem;
 }
 
 .project{
-    margin: 1em;
+    margin: 1rem;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     border: var(--border);
