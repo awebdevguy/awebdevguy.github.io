@@ -6,7 +6,9 @@
     --mainText: black;
     --secondaryText: #4b5156;
 
-    --linkColor: #17a2b8;
+    /* --linkColor: #17a2b8; */
+    --linkColor: teal;
+
     --boxBGColor: transparent;
     --markColor: red;
 
@@ -229,13 +231,12 @@ box-shadow: var(--box-shadow);
 #navigation{
     margin: 0;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    padding-left: 0;
+    padding: 10px 0;
 }
 
 #navigation li{
     margin: 0 .3em;
+    padding: 0 .5rem;
 }
 
 .left-column {
@@ -551,5 +552,13 @@ mark.white {
 
     #core-skills-wrapper, #familiarities-wrapper {
         margin: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    #navigation {
+        display: block;
+        line-height: 1.5rem;
     }
 }

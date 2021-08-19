@@ -4,11 +4,11 @@
 var m = document.getElementById("menu");
 var h = document.getElementById("header");
 var bw = document.documentElement.clientWidth;
+var hamburger = document.getElementById("hamburger");
 
-// hide the menu list on load
-m.style.display = "none";
-
-// 
+// Display of menu on load depends on current screen size.
+hideMenu();
+ 
 function toggleMenu() {  
     
     bw = document.documentElement.clientWidth;
@@ -24,7 +24,11 @@ function toggleMenu() {
     }
 }
 
+// Menu displays inline if large screen otherwise is hidden.
 function hideMenu() {
+
+    bw = document.documentElement.clientWidth;
+
     if(bw < 800) {
         displayNone();
     } else {
@@ -32,6 +36,7 @@ function hideMenu() {
     }
 }
 
+// Mobile displays menu in block.
 function displayBlock() {
     h.style.display = "block";
     h.style.justifyContent = "initial";
@@ -40,8 +45,10 @@ function displayBlock() {
     m.style.top = "auto";
     m.style.justifyContent = "initial";
     m.style.right = "auto";
+    hamburger.style.display = "initial";
 }
 
+// Large screens displays menu inline.
 function displayFlex() {
     h.style.display = "flex";
     h.style.justifyContent = "space-between";
@@ -49,24 +56,23 @@ function displayFlex() {
     m.style.position = "relative";
     m.style.top = "0";
     m.style.justifyContent = "flex-end";
-    m.style.right = "75px";
+    hamburger.style.display = "none";
 }
 
+// Hides menu list and displays hamburger icon.
 function displayNone() {
     m.style.display = "none";
+    hamburger.style.display = "initial";
 }
 
+// Switch between two themes.
 function toggleFlat(element) {
-
-    var link = document.getElementById(element.id);
 
     if(document.body.classList.contains("flat-square-mode")) {
         document.body.classList.remove("flat-square-mode");
-        link.innerHTML = "Flat-Theme";
         localStorage.setItem('flat', 'false');
     } else {
         document.body.classList.add("flat-square-mode");
-        link.innerHTML = "3D-Theme";
         localStorage.setItem('flat', 'true');
     }
 }
@@ -132,14 +138,15 @@ function resetContactForm() {
     document.getElementById("contact-form").reset();
 }
 
+
 function setDisplay(e) {
 
     if(e.target.innerWidth < 800) {
         displayBlock();
+        m.style.display = "none";       
     } else {
         displayFlex();
     }
-    m.style.display = "none";
 }
 
 window.addEventListener('resize', (e) => {

@@ -27,7 +27,7 @@
   </head>
   <body>
     <nav id="header">
-        <a id="home-link" href="#top" onclick="hideMenu()">Home</a>
+        <a id="home-link" href="#top">Home</a>
         <div id="menu">
             <a href="#about" onclick="hideMenu()">About Me</a>
             <a target="_blank" href="./webdev_resume.pdf" onclick="hideMenu()">Resume</a>
@@ -36,7 +36,7 @@
         </div>
 
         <!-- "Hamburger menu" / "Bar icon" toggle-->
-        <a href="javascript:void(0);" class="icon" onclick="toggleMenu(event)"><i class="fa fa-bars"></i></a>
+        <a id="hamburger" href="javascript:void(0);" class="icon" onclick="toggleMenu(event)"><i class="fa fa-bars"></i></a>
     </nav>
 
     <section class="s1" id="home">
@@ -53,8 +53,8 @@
                     <div id="dot-3" class="browser-dot"></div>
                 </div>
                 <ul id="navigation">
-                    <li><a id="flat-3D" onclick="toggleFlat(this)">Flat-Theme</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a id="flat-3D" onclick="toggleFlat(this)">Switch Theme</a></li>
+                    <!-- <li><a href="#contact">Contact</a></li> -->
                 </ul>
             </div>
 
@@ -62,7 +62,7 @@
             <img id="profile-pic" src="images/profile_banff.jpg" alt="profile picture">
             <!-- <img id="profile-pic" src="images/profile_banff_bw.jpeg" alt="profile picture"> -->
             <!-- <img id="profile-pic" src="images/profile_les_rose.jpg" alt="profile picture"> -->
-            <h6 style="text-align: center; margin-top: .5rem;" >Banff National Park</h6>
+            <p style="text-align: center; margin-top: .5rem;" >Banff National Park</p>
 
           </div>
           <div class="right-column">
@@ -91,7 +91,6 @@
                 <p>The same capabilities and attitude carries well into web development, with its challenges of finding just the right solutions. I thrive on challenges.</p>
                 <p>When not coding, I enjoy playing hockey and going out for walks and enjoying the beautiful outdoors.</p>
                 <p> I am down to earth, easy to talk to and I get along really well with everybody. I appreciate you taking the time to find out who I am and what I do.</p>
-                <p>Thank you,<br>Les</p>
             </div>
             <a target="_blank" href="./webdev_resume.pdf"><button id="resume-btn" >My Resume</button></a>
 
@@ -271,7 +270,7 @@
                 <label for="email">Email <mark class="red">*</mark></label>
                 <input id="email" class="input-field" type="email" name="email" required >
                 <label for="subject">Subject</label>
-                <input id="subject" class="input-field" type="text" name="subject">
+                <input id="subject" class="input-field" type="text" value="Contact Request" name="subject">
                 <label for="message">Message <mark class="red">*</mark></label>
                 <textarea id="message" class="input-field" type="text" name="message" required></textarea>
                 <div id="btn-wrapper">
