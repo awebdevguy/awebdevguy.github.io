@@ -27,7 +27,7 @@
   </head>
   <body>
     <nav id="header">
-        <a id="home-link" href="#top">Home</a>
+        <a id="home-link" href="#top" onclick="hideMenu()">Home</a>
         <div id="menu">
             <a href="#about" onclick="hideMenu()">About Me</a>
             <a target="_blank" href="./webdev_resume.pdf" onclick="hideMenu()">Resume</a>
@@ -43,7 +43,7 @@
     <section class="s1" id="home">
       <div class="main-container">
         <div class="greeting-wrapper">
-            <h1 class="s1s3-title">Hi, &#160;&#160;I'm Les Quines</h1>
+            <h1 class="s1s3-title">Hi,&#160;&#160;I'm Les Quines</h1>
         </div>
 
         <div class="intro-wrapper">
@@ -68,10 +68,10 @@
           </div>
           <div class="right-column">
             <div id="preview">
-                <h3 style="font-family: Roboto Mono;">Who I Am</h3>
-                <p>A Canadian Air Force technician in my past life.</p>
-                <h3>What I Do</h3>
-                <p>Create beautiful websites.</p>
+                <h3 style="font-family: roboto mono">Who I Am</h3>
+                <p>I am a veteran of the Canadian Air Force.</p>
+                <h3 style="font-family: roboto mono">What I Do</h3>
+                <p>I do beautiful websites.</p>
             </div>
           </div>
         </div>
@@ -93,7 +93,6 @@
                 <p>When not coding, I enjoy playing hockey and going out for walks and enjoying the beautiful outdoors.</p>
                 <p> I am down to earth, easy to talk to and I get along really well with everybody. I appreciate you taking the time to find out who I am and what I do.</p>
             </div>
-            <!-- <a target="_blank" href="./webdev_resume.pdf"><button id="resume-btn" >My Resume</button></a> -->
 
             <div id="competency-wrapper">
                 <div id="core-skills-wrapper">
@@ -103,7 +102,7 @@
                         <ul>
                             <li>HTML</li>
                             <li>CSS</li>
-                            <li>JavaScript</li>
+                            <li>Javascript</li>
                         </ul>
                     </div>
                 </div>
@@ -260,7 +259,7 @@
         <div class="main-container">
             <h3 id="contact-title" class="section-title">Contact</h3>
             <div id="email-link-container">
-                <p style="text-align: center; margin: 0;"><a href="mailto:les.quines@gmail.com?subject=Contact Requested">les.quines@gmail.com</a></p>
+                <p style="text-align: center; margin: 0;"><a id="email-link" href="mailto:les.quines@gmail.com?subject=Contact Requested">les.quines@gmail.com</a></p>
             </div>
 
             <form id="contact-form">
