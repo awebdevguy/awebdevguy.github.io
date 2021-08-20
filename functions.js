@@ -75,6 +75,12 @@ function toggleFlat(element) {
         document.body.classList.add("flat-square-mode");
         localStorage.setItem('flat', 'true');
     }
+
+    bw = document.documentElement.clientWidth;
+    
+    if(bw < 800) {
+        hideMenu();
+    }
 }
 
 function readMore(index) {

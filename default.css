@@ -151,10 +151,10 @@ top: 0;
 }
 
 /* Add a background color on mouse-over */
-#header a:hover{
+#header a:hover {
 background-color: var(--headHoverColor);
 color: var(--headFootBGColor);
-box-shadow: var(--box-shadow);
+/* box-shadow: var(--box-shadow); */
 }
 
 .s1, .s2, .s3, .s4 {
@@ -273,9 +273,7 @@ box-shadow: var(--box-shadow);
 }
 
 #flat-3D {
-    text-align: center;
     cursor: pointer;
-    color: var(--linkColor);
 }
 
 .right-column {
