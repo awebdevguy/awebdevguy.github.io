@@ -245,7 +245,7 @@ color: var(--headFootBGColor);
 #about-me {
     font-size: 1.1rem;
     line-height: 1.7rem;
-    padding: 8rem 16rem;
+    padding: 10% 15%;
     background-color: var(--boxBGColor);
     box-shadow: var(--box-shadow);
     border: var(--border);
@@ -462,13 +462,8 @@ mark.white {
         display: block;
         grid-template-columns: 1fr;
         grid-template-areas:
-            'nav-wrapper'
             'left-column'
             'right-column';
-    }
-
-    #about-me {
-        padding: 1rem;
     }
 
     #competency-wrapper{
@@ -485,8 +480,11 @@ mark.white {
 
 @media screen and (max-width: 400px) {
 
-    #navigation {
-        display: block;
-        line-height: 1.5rem;
+    #about-me {
+        padding: 1em;
+    }
+
+    #contact-form {
+        padding: 1em;
     }
 }
