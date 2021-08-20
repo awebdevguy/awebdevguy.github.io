@@ -231,9 +231,10 @@ color: var(--headFootBGColor);
 }
 
 #preview{
+    margin: auto;
     max-width: 95%;
     min-height: 300px;
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
     text-align: center;
 }
 
