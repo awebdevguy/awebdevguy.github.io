@@ -66,20 +66,39 @@ function displayNone() {
 }
 
 // Switch between two themes.
-function toggleFlat(element) {
+function toggleDark() {
 
-    if(document.body.classList.contains("flat-square-mode")) {
-        document.body.classList.remove("flat-square-mode");
-        localStorage.setItem('flat', 'false');
+    if(document.body.classList.contains("dark-mode")) {
+        document.body.classList.remove("dark-mode");
+        document.getElementById('profile-pic').setAttribute('src', "images/profile_banff.jpg");
+        localStorage.setItem('dark', 'false');
     } else {
-        document.body.classList.add("flat-square-mode");
-        localStorage.setItem('flat', 'true');
+        document.body.classList.add("dark-mode");
+        document.getElementById('profile-pic').setAttribute('src', "images/profile_banff_bw.jpg");
+        localStorage.setItem('dark', 'true');
     }
 
     bw = document.documentElement.clientWidth;
     
     if(bw < 800) {
         hideMenu();
+    }
+}
+
+// Toggle picture, not really intended, like an easter egg.
+function changePic(element) {
+    if(element.id == "profile-pic") {
+        element.setAttribute('src', "images/profile_les_rose.jpg");
+        document.getElementById('pic-text').textContent = "Me and my beautiful wife, Rose.";
+        element.setAttribute('id', "profile-pic2");
+    } else if(element.id == "profile-pic2") {
+        element.setAttribute('src', "images/profile_banff.jpg");
+        document.getElementById('pic-text').textContent = "Banff National Park";
+        element.setAttribute('id', "profile-pic3");
+    } else {
+        element.setAttribute('src', "images/profile_banff_bw.jpg");
+        document.getElementById('pic-text').textContent = "Banff National Park";
+        element.setAttribute('id', "profile-pic");
     }
 }
 

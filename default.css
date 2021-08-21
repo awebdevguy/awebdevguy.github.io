@@ -9,7 +9,7 @@
     --emailAddressColor: rgb(240, 243, 46);
 /* --linkColor: #17a2b8; */
     --linkColor: teal;
-    --markColor: red;
+    /* --markColor: red; */
 
     --boxBGColor: #c8d8e4;
 
@@ -28,14 +28,14 @@
     --headTextColor: var(--mainColor);
 }
 
-.flat-square-mode {
+.dark-mode {
     --mainText: var(--mainColor);
 
     --emailAddressColor: rgb(240, 243, 46);
     --linkColor: rgb(240, 243, 46);
-    --markColor: rgb(240, 243, 46);
+    /* --markColor: rgb(240, 243, 46); */
 
-    --boxBGColor: transparent;
+    --boxBGColor: black;
     --box-shadow: none;
     --border-radius: none;
     --border: 1px solid #c1c1c1;
@@ -216,7 +216,7 @@ color: var(--headTextColor);
     padding: 4.5em 0 0;
 }
 
-#profile-pic{
+.profile-pic{
     display: block;
     margin: auto;
     height: 300px;
@@ -289,6 +289,7 @@ color: var(--headTextColor);
     box-shadow: var(--box-shadow);
     border: var(--border);
     background-color: var(--boxBGColor);
+    /* background: black; */
 }
 
 .image-container{
@@ -357,6 +358,7 @@ color: var(--headTextColor);
     margin: 3em auto auto auto;
     padding: 2em;
     background-color: var(--boxBGColor);
+    /* background: black; */
     border: var(--border);
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
@@ -430,12 +432,17 @@ footer h6{
 }
 
 mark.red {
-    color:var(--markColor);
+    color:red;
     background: none;
 }
 
 mark.white {
     color:#fff;
+    background: none;
+}
+
+mark.green {
+    color: green;
     background: none;
 }
 

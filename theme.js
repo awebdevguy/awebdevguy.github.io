@@ -1,6 +1,6 @@
-let isFlat = localStorage.getItem('flat');
+let isDark = localStorage.getItem('dark');
 
-if(isFlat === 'true') {
-    document.body.classList.add("flat-square-mode");
-    // document.getElementById('flat-3D').innerHTML = '3D-Theme';
+if(isDark === 'true') {
+    document.body.classList.add("dark-mode");
+    document.getElementById('profile-pic').setAttribute('src', "images/profile_banff_bw.jpg");
 }

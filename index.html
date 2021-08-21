@@ -30,7 +30,7 @@
             <a target="_blank" href="./webdev_resume.pdf" onclick="hideMenu()">Resume</a>
             <a href="#portfolio" onclick="hideMenu()">Portfolio</a>
             <a href="#contact" onclick="hideMenu()">Contact</a>
-            <a id="flat-3D" onclick="toggleFlat(this)">Change Theme</a>
+            <a id="dark" onclick="toggleDark()">Change Theme</a>
         </div>
 
         <!-- "Hamburger menu" / "Bar icon" toggle-->
@@ -47,11 +47,8 @@
         <div class="intro-wrapper">
 
             <div class="left-column">
-                <!-- <img id="profile-pic" src="images/profile_banff.jpg" alt="profile picture"> -->
-                <img id="profile-pic" src="images/profile_banff_bw.jpeg" alt="profile picture">
-                <!-- <img id="profile-pic" src="images/profile_les_rose.jpg" alt="profile picture"> -->
-                <p style="text-align: center; margin-top: .5rem;" >Banff National Park</p>
-
+                <img class="profile-pic" id="profile-pic" src="images/profile_banff.jpg" alt="profile picture" onclick="changePic(this)">
+                <p id="pic-text" style="text-align: center; margin-top: .5rem;" >Banff National Park</p>
             </div>
 
             <div class="right-column">
@@ -271,7 +268,7 @@
         </div>
     </section>
 
-    <footer><h6 id="footer"><a id="footer-link" target="_blank" href="https://github.com/awebdevguy">&lt;<mark class="red">awebdevguy</mark>&gt;<mark class="white">Les Quines</mark>&lt;/<mark class="red">awebdevguy</mark>&gt;</a></h6></footer>
+    <footer><h6 id="footer"><a id="footer-link" target="_blank" href="https://github.com/awebdevguy"><mark class="green">&lt;</mark><mark class="red">awebdevguy</mark><mark class="green">&gt;</mark><mark class="white">Les Quines</mark><mark class="green">&lt;/</mark><mark class="red">awebdevguy</mark><mark class="green">&gt;</mark></a></h6></footer>
     
     <script src="./functions.js" async defer></script>
     <script>
