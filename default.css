@@ -369,13 +369,14 @@ color: var(--headTextColor);
 
 .input-field{
     width: 100%;
-    padding: 1em auto;
-    margin-bottom: 10px;
+    /* padding: 1em auto; */
+    margin-bottom: 12px;
     background-color: var(--boxBGColor);
     /* box-shadow: var(--box-shadow); */
     /* border-radius: var(--border-radius); */
     border: var(--border);
     font-size: 1em;
+    line-height: 2em;
 }
 
 #contact-form label{
