@@ -224,7 +224,7 @@ color: var(--headTextColor);
     object-fit: cover;
     border: var(--border);
     border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);    
 }
 
 .right-column {
@@ -240,13 +240,7 @@ color: var(--headTextColor);
     text-align: center;
 }
 
-/* #about-me p {
-    font-weight: 300;
-} */
-
 #about-me {
-    /* font-size: 1.1rem; */
-    /* line-height: 1.5rem; */
     padding: 10% 15%;
     background-color: var(--boxBGColor);
     box-shadow: var(--box-shadow);
@@ -279,6 +273,7 @@ color: var(--headTextColor);
     border: var(--border);
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
+    line-height: 1.5em;
 }
 
 #projects-wrapper{

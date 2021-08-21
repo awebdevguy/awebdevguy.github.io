@@ -6,26 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Les Quines</title>
-    <meta name="description" content="Site for my projects">
-
-    <meta property="og:title" content="About Les Quines">
+    <meta name="description" content="About Les Quines and his web development projects. Includes links to resume and contact info. There's an option to change themes.">
+    <!-- <meta property="og:title" content="Les Quines">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:description" content="Site for my projects">
-    <meta property="og:image" content="">
+    <meta property="og:url" content="htts://awebdevguy.github.io"> -->
+    <!-- <meta property="og:description" content="">
+    <meta property="og:image" content=""> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&family=Lato:wght@100;300;400;700&family=Open+Sans:wght@300;400;600;700&family=Quicksand:wght@300;400;500;600;700&family=Roboto+Mono:wght@100;200;300;400;500;700&family=Russo+One&display=swap" rel="stylesheet"> -->
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="default.css">
-    <link id="theme-style" rel="stylesheet" href="">
-
     <script src="./theme.js" async defer></script>
-
   </head>
   <body>
     <nav id="header">
@@ -35,7 +30,7 @@
             <a target="_blank" href="./webdev_resume.pdf" onclick="hideMenu()">Resume</a>
             <a href="#portfolio" onclick="hideMenu()">Portfolio</a>
             <a href="#contact" onclick="hideMenu()">Contact</a>
-            <a id="flat-3D" onclick="toggleFlat(this)">Switch-Theme</a>
+            <a id="flat-3D" onclick="toggleFlat(this)">Change Theme</a>
         </div>
 
         <!-- "Hamburger menu" / "Bar icon" toggle-->
@@ -44,38 +39,30 @@
 
     <section class="s1" id="home">
       <div class="main-container">
+        
         <div class="greeting-wrapper">
             <h1 class="s1s3-title">Hi,&#160;&#160;I'm Les Quines</h1>
         </div>
 
         <div class="intro-wrapper">
-            <div class="nav-wrapper">
-                <div class="dots-wrapper">
-                    <div id="dot-1" class="browser-dot"></div>
-                    <div id="dot-2" class="browser-dot"></div>
-                    <div id="dot-3" class="browser-dot"></div>
-                </div>
-                <ul id="navigation">
-                    <!-- <li><a id="flat-3D" onclick="toggleFlat(this)">Switch Theme</a></li> -->
-                    <!-- <li><a href="#contact">Contact</a></li> -->
-                </ul>
+
+            <div class="left-column">
+                <!-- <img id="profile-pic" src="images/profile_banff.jpg" alt="profile picture"> -->
+                <img id="profile-pic" src="images/profile_banff_bw.jpeg" alt="profile picture">
+                <!-- <img id="profile-pic" src="images/profile_les_rose.jpg" alt="profile picture"> -->
+                <p style="text-align: center; margin-top: .5rem;" >Banff National Park</p>
+
             </div>
 
-          <div class="left-column">
-            <!-- <img id="profile-pic" src="images/profile_banff.jpg" alt="profile picture"> -->
-            <img id="profile-pic" src="images/profile_banff_bw.jpeg" alt="profile picture">
-            <!-- <img id="profile-pic" src="images/profile_les_rose.jpg" alt="profile picture"> -->
-            <p style="text-align: center; margin-top: .5rem;" >Banff National Park</p>
-
-          </div>
-          <div class="right-column">
-            <div id="preview">
-                <h3>Who I Am</h3>
-                <p>I am a veteran of the Canadian Air Force. An aircraft technician in my past life.</p>
-                <h3>What I Do</h3>
-                <p>I do beautiful websites.</p>
+            <div class="right-column">
+                <div id="preview">
+                    <h3>Who I Am</h3>
+                    <p>I am a veteran of the Canadian Air Force. An aircraft technician in my past life.</p>
+                    <h3>What I Do</h3>
+                    <p>I do beautiful websites.</p>
+                </div>           
             </div>
-          </div>
+
         </div>
       </div>
     </section>
