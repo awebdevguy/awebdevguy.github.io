@@ -1,7 +1,7 @@
 :root {
     --mainColor: #eaeaea;
     --secondaryColor: #fff;
-    --borderColor: #c1c1c1;
+    /* --borderColor: #c1c1c1; */
 
     --mainText: black;
     --secondaryText: #4b5156;
@@ -15,7 +15,7 @@
 
     --box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     --border-radius: 5px;
-    --border: 1px solid var(--borderColor);
+    --border: 1px solid gray;
     /* --background: #ffffff; */
     /* --background: #f2f2f2; */
     /* --background: #c8d8e4; */
@@ -24,7 +24,8 @@
     --s1s3-title-color: black;
     --dot-radius: 50%;
     --headFootBGColor: black;
-    --headHoverColor: var(--background)
+    --headHoverColor: var(--background);
+    --headTextColor: var(--mainColor);
 }
 
 .flat-square-mode {
@@ -37,10 +38,12 @@
     --boxBGColor: transparent;
     --box-shadow: none;
     --border-radius: none;
-    --border: 1px solid var(--borderColor);
+    --border: 1px solid #c1c1c1;
     --background: url("./images/Slanted-Gradient.svg");
     --s1s3-title-color: var(--mainColor);
     --dot-radius: none;
+    --headHoverColor: rgb(124, 0, 6);
+    --headTextColor: var(--mainColor);
 }
 
 * {
@@ -63,11 +66,12 @@ label,
 input,
 textarea {
     color: var(--mainText);
-    font-family: 'Roboto Mono', sans-serif;
+    font-family: 'Spartan', sans-serif;
 }
 
 p {
     font-weight: 400;
+    line-height: 1.5rem;
     padding-bottom: 1rem;
 }
 
@@ -79,7 +83,7 @@ h5,
 h6,
 strong {
     color: var(--mainText);
-    font-family: 'Russo One', sans-serif;
+    font-family: 'Barlow', sans-serif;
 }
 
 a {
@@ -121,7 +125,7 @@ h6 {
     background-color: var(--headFootBGColor);
     position: sticky;
     top: 0;
-    border: 1px solid var(--borderColor);
+    border: var(--border);
     box-shadow: var(--box-shadow);
 }
 
@@ -154,7 +158,7 @@ top: 0;
 /* Add a background color on mouse-over */
 #header a:hover {
 background-color: var(--headHoverColor);
-color: var(--headFootBGColor);
+color: var(--headTextColor);
 }
 
 #flat-3D {
@@ -197,7 +201,7 @@ color: var(--headFootBGColor);
 
 .intro-wrapper {
     background-color: var(--boxBGColor);
-    border: 1px solid var(--borderColor);
+    border: var(--border);
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
@@ -215,8 +219,6 @@ color: var(--headFootBGColor);
 #profile-pic{
     display: block;
     margin: auto;
-
-
     height: 300px;
     max-width: 100%;
     object-fit: cover;
@@ -234,17 +236,17 @@ color: var(--headFootBGColor);
     margin: auto;
     max-width: 95%;
     min-height: 300px;
-    /* padding: 0 2rem; */
+    padding: 0 2rem;
     text-align: center;
 }
 
-#about-me p {
+/* #about-me p {
     font-weight: 300;
-}
+} */
 
 #about-me {
-    font-size: 1.1rem;
-    line-height: 1.7rem;
+    /* font-size: 1.1rem; */
+    /* line-height: 1.5rem; */
     padding: 10% 15%;
     background-color: var(--boxBGColor);
     box-shadow: var(--box-shadow);
@@ -341,7 +343,7 @@ color: var(--headFootBGColor);
     color: var(--mainText);
     background-color: var(--boxBGColor);
     border-width: 1px;
-    border: 1px solid var(--borderColor);
+    border: var(--border);
     border-radius: var(--border-radius);
 }
 
@@ -370,9 +372,9 @@ color: var(--headFootBGColor);
     padding: 1em auto;
     margin-bottom: 10px;
     background-color: var(--boxBGColor);
-    box-shadow: var(--box-shadow);
-    border-radius: var(--border-radius);
-    border: 2px solid gray;
+    /* box-shadow: var(--box-shadow); */
+    /* border-radius: var(--border-radius); */
+    border: var(--border);
     font-size: 1em;
 }
 
