@@ -453,6 +453,11 @@ mark.white {
     background: none;
 }
 
+#version {
+    position: absolute;
+    right: 1rem;
+}
+
 @media screen and (max-width: 1200px) {
 
     .main-container {
@@ -466,6 +471,10 @@ mark.white {
         display: block;
     }
 
+    #logo-anchor #logo {
+        display: none;
+    }
+    
     #preview {
         padding: 0 1rem 1rem 1rem;
     }
