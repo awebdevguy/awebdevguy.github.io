@@ -1,24 +1,18 @@
 :root {
     --mainColor: #eaeaea;
     --secondaryColor: #fff;
-    /* --borderColor: #c1c1c1; */
 
     --mainText: black;
     --secondaryText: #4b5156;
 
     --emailAddressColor: rgb(240, 243, 46);
-/* --linkColor: #17a2b8; */
     --linkColor: teal;
-    /* --markColor: red; */
 
     --boxBGColor: #c8d8e4;
 
     --box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     --border-radius: 5px;
     --border: 1px solid gray;
-    /* --background: #ffffff; */
-    /* --background: #f2f2f2; */
-    /* --background: #c8d8e4; */
     --background: #52ab98;
 
     --s1s3-title-color: black;
@@ -33,7 +27,6 @@
 
     --emailAddressColor: rgb(240, 243, 46);
     --linkColor: rgb(240, 243, 46);
-    /* --markColor: rgb(240, 243, 46); */
 
     --boxBGColor: black;
     --box-shadow: none;
@@ -127,6 +120,10 @@ h6 {
     top: 0;
     border: var(--border);
     box-shadow: var(--box-shadow);
+}
+
+#header img {
+    width: 1rem;
 }
 
 #home-link {
