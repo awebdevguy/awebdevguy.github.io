@@ -126,8 +126,20 @@ h6 {
     box-shadow: var(--box-shadow);
 }
 
-#home-link {
+#header #logo-anchor {
+    height: inherit;
+    padding: inherit;
+    padding: 10px 1rem 5px 1rem;
+    align-self: center;
+}
+
+#logo {
+    height: 2rem;
+}
+
+#header #home-link {
     flex-grow: 1;
+    padding-left: 1rem;
 }
   
   /* Hide nav menu links except logo/home */
