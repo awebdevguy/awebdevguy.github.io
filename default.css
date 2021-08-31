@@ -123,12 +123,15 @@ h6 {
 }
 
 #header img {
-    height: 17px;
-    padding-right: .5rem;
+    height: 2rem;
+    padding: 0 .5rem 0 1rem;
+    position: relative;
+    top: 10px;
 }
 
-#home-link {
+#header #home-link {
     flex-grow: 1;
+    padding: 0;
 }
   
   /* Hide nav menu links except logo/home */
@@ -139,7 +142,7 @@ h6 {
 /* Style navigation menu links */
 #header a {
 color: var(--mainColor);
-padding: 14px 32px;
+padding: 1rem;
 text-decoration: none;
 font-size: 17px;
 display: block;
@@ -458,6 +461,15 @@ mark.green {
 }
 
 @media screen and (max-width: 800px) {
+
+    #header img {
+        padding-left: 1rem;
+        top: 7px;
+    }
+
+    #header #home-link {
+        padding-bottom: .5rem;
+    }
     
     #header, #menu {
         display: block;
@@ -495,8 +507,6 @@ mark.green {
 
     .section-title {
         margin-top: 0;
-        /* margin-bottom: 0; */
-        /* padding-top: 0; */
     }
 
     #contact-form {

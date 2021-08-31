@@ -25,7 +25,7 @@
   </head>
   <body>
     <nav id="header">
-        <a id="home-link" href="#top" onclick="hideMenu()"><span><img src="./images/LogoQLargeWhiteBG.png" alt="Logo"></span>  Home</a>
+        <a id="home-link" href="#top" onclick="hideMenu()"><img src="./images/LogoQLargeWhiteBG.png" alt="Logo">Home</a>
         <div id="menu">
             <a href="#about" onclick="hideMenu()">About Me</a>
             <a target="_blank" href="./webdev_resume.pdf" onclick="hideMenu()">Resume</a>
@@ -250,14 +250,11 @@
             </div>
 
             <form id="contact-form">
-                <!-- <label style="float: right;"><mark class="red">*</mark> Required</label>
+                <label style="float: right;"><mark class="red" style="font-size: x-large;">*</mark> Required Information</label>
                 <br>
-                <mark class="red">*</mark> -->
-                <!-- <label for="name">Name <mark class="red">*</mark></label> -->
-                <input id="name" class="input-field" type="text" name="name" required placeholder="name">
-                <!-- <label for="email">Email <mark class="red">*</mark></label> -->
+                <br>
+                <input id="name" class="input-field" type="text" name="name" required placeholder="full name">
                 <input id="email" class="input-field" type="email" name="email" required placeholder="email address">
-                <!-- <label for="message">Message <mark class="red">*</mark></label> -->
                 <textarea id="message" class="input-field" type="text" name="message" required placeholder="your message"></textarea>
                 <div id="btn-wrapper">
                     <button class="contact-btn" id="cancel-btn" type="button" onclick="resetContactForm()">Cancel</button>
@@ -272,6 +269,7 @@
     
     <script src="./functions.js" async defer></script>
     <script>
+        // prevents form resubmition on page refresh.
         if ( window.history.replaceState ) {
           window.history.replaceState( null, null, window.location.href );
         }
