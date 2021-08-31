@@ -25,7 +25,7 @@
   </head>
   <body>
     <nav id="header">
-        <a id="home-link" href="#top" onclick="hideMenu()">Home</a>
+        <a id="home-link" href="#top" onclick="hideMenu()"><span><img src="./images/LogoQLargeWhiteBG.png" alt="Logo"></span>  Home</a>
         <div id="menu">
             <a href="#about" onclick="hideMenu()">About Me</a>
             <a target="_blank" href="./webdev_resume.pdf" onclick="hideMenu()">Resume</a>
@@ -250,14 +250,15 @@
             </div>
 
             <form id="contact-form">
-                <label style="float: right;"><mark class="red">*</mark> Required</label>
+                <!-- <label style="float: right;"><mark class="red">*</mark> Required</label>
                 <br>
-                <label for="name">Name <mark class="red">*</mark></label>
-                <input id="name" class="input-field" type="text" name="name" required>
-                <label for="email">Email <mark class="red">*</mark></label>
-                <input id="email" class="input-field" type="email" name="email" required >
-                <label for="message">Message <mark class="red">*</mark></label>
-                <textarea id="message" class="input-field" type="text" name="message" required></textarea>
+                <mark class="red">*</mark> -->
+                <!-- <label for="name">Name <mark class="red">*</mark></label> -->
+                <input id="name" class="input-field" type="text" name="name" required placeholder="name">
+                <!-- <label for="email">Email <mark class="red">*</mark></label> -->
+                <input id="email" class="input-field" type="email" name="email" required placeholder="email address">
+                <!-- <label for="message">Message <mark class="red">*</mark></label> -->
+                <textarea id="message" class="input-field" type="text" name="message" required placeholder="your message"></textarea>
                 <div id="btn-wrapper">
                     <button class="contact-btn" id="cancel-btn" type="button" onclick="resetContactForm()">Cancel</button>
                     <button class="contact-btn" id="submit-btn" type="submit">Send</button>
@@ -267,7 +268,7 @@
         </div>
     </section>
 
-    <footer><h6 id="footer"><a id="footer-link" target="_blank" href="https://github.com/awebdevguy"><mark class="green">&lt;</mark><mark class="red">awebdevguy</mark><mark class="green">&gt;</mark><mark class="white">Les Quines</mark><mark class="green">&lt;/</mark><mark class="red">awebdevguy</mark><mark class="green">&gt;</mark></a></h6></footer>
+    <footer><h6 id="footer"><a id="footer-link" target="_blank" href="https://github.com/awebdevguy"><mark class="green">&lt;</mark><mark class="red">awebdevguy</mark><mark class="green">&gt;</mark><mark class="white">Les Quines</mark><mark class="green">&lt;/</mark><mark class="red">awebdevguy</mark><mark class="green">&gt;</mark></a><mark id="version" class="white">v3.1</mark></h6></footer>
     
     <script src="./functions.js" async defer></script>
     <script>
