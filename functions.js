@@ -179,15 +179,15 @@ window.addEventListener('resize', (e) => {
 })
 
 // get starting scroll position of window
-var startPointY = window.scrollY;
+// var startPointY = window.scrollY;
 
-window.addEventListener('scroll', () => {
+// window.addEventListener('scroll', () => {
 
-    bw = document.documentElement.clientWidth;
+//     bw = document.documentElement.clientWidth;
 
-    if(bw < 800) {
-        startPointY < this.scrollY ? h.style.display = 'none' : h.style.display = 'block';
+//     if(bw < 800) {
+//         startPointY < this.scrollY ? h.style.display = 'none' : h.style.display = 'block';
 
-        startPointY = this.scrollY;
-    }
-})
+//         startPointY = this.scrollY;
+//     }
+// })
