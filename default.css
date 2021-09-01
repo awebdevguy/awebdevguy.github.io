@@ -291,7 +291,6 @@ color: var(--headTextColor);
     box-shadow: var(--box-shadow);
     border: var(--border);
     background-color: var(--boxBGColor);
-    /* background: black; */
 }
 
 .image-container{
@@ -360,7 +359,6 @@ color: var(--headTextColor);
     margin: 2em auto auto auto;
     padding: 2em;
     background-color: var(--boxBGColor);
-    /* background: black; */
     border: var(--border);
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
@@ -368,11 +366,8 @@ color: var(--headTextColor);
 
 .input-field{
     width: 100%;
-    /* padding: 1em auto; */
-    margin-bottom: 12px;
+    margin-bottom: 1em;
     background-color: var(--boxBGColor);
-    /* box-shadow: var(--box-shadow); */
-    /* border-radius: var(--border-radius); */
     border: var(--border);
     font-size: 1em;
     line-height: 2em;
@@ -392,7 +387,6 @@ color: var(--headTextColor);
 
 .contact-btn {
     line-height: 2rem;
-    margin-top: 1em;
     background-color: transparent;
     color: var(--mainText);
     width: 100%;
