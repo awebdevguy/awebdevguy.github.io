@@ -242,11 +242,17 @@ color: var(--headTextColor);
 }
 
 #about-me {
-    padding: 10% 15%;
+    padding: 5% 15%;
     background-color: var(--boxBGColor);
     box-shadow: var(--box-shadow);
     border: var(--border);
     border-radius: var(--border-radius);
+}
+
+.aboutme {
+    font-size: 1.2rem;
+    font-weight: 200;
+    line-height: 1.9rem;
 }
 
 #competency-wrapper{

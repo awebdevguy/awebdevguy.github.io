@@ -177,3 +177,17 @@ function setDisplay(e) {
 window.addEventListener('resize', (e) => {
     setDisplay(e);
 })
+
+// get starting scroll position of window
+var startPointY = window.scrollY;
+
+window.addEventListener('scroll', () => {
+
+    bw = document.documentElement.clientWidth;
+
+    if(bw < 800) {
+        startPointY < this.scrollY ? h.style.display = 'none' : h.style.display = 'block';
+
+        startPointY = this.scrollY;
+    }
+})
