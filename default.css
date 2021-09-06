@@ -284,6 +284,10 @@ color: var(--headTextColor);
     padding: 2rem 0;
 }
 
+#core-skills ul, #familiarities ul {
+    margin: 0;
+}
+
 #projects-wrapper{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 385px));
@@ -496,6 +500,10 @@ mark.green {
 
     #core-skills-wrapper, #familiarities-wrapper {
         margin: 0;
+    }
+
+    #version {
+        display: none;
     }
 }
 
