@@ -71,10 +71,12 @@ function toggleDark() {
     if(document.body.classList.contains("dark-mode")) {
         document.body.classList.remove("dark-mode");
         document.getElementById('profile-pic').setAttribute('src', "images/profile_banff.jpg");
+        document.getElementById('dark').innerText = 'Dark-Mode';
         localStorage.setItem('dark', 'false');
     } else {
         document.body.classList.add("dark-mode");
         document.getElementById('profile-pic').setAttribute('src', "images/profile_banff_bw.jpg");
+        document.getElementById('dark').innerText = 'Light-Mode';
         localStorage.setItem('dark', 'true');
     }
 
