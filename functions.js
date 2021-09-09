@@ -66,18 +66,24 @@ function displayNone() {
 }
 
 // Switch between two themes.
-function toggleDark() {
+function toggleMode() {
 
     if(document.body.classList.contains("dark-mode")) {
         document.body.classList.remove("dark-mode");
+        document.body.classList.add("bright-mode");
         document.getElementById('profile-pic').setAttribute('src', "images/profile_banff.jpg");
-        document.getElementById('dark').innerText = 'Dark-Mode';
-        localStorage.setItem('dark', 'false');
+        document.getElementById('mode').innerText = 'Bland';
+        localStorage.setItem('mode', 'sunny');
+    } else if(document.body.classList.contains("bright-mode")) {
+        document.body.classList.remove("bright-mode");
+        document.getElementById('profile-pic').setAttribute('src', "images/profile_banff_bw.jpg");
+        document.getElementById('mode').innerText = 'Dark';
+        localStorage.setItem('mode', 'bland');
     } else {
         document.body.classList.add("dark-mode");
-        document.getElementById('profile-pic').setAttribute('src', "images/profile_banff_bw.jpg");
-        document.getElementById('dark').innerText = 'Light-Mode';
-        localStorage.setItem('dark', 'true');
+        document.getElementById('profile-pic').setAttribute('src', "images/profile_banff.jpg");
+        document.getElementById('mode').innerText = 'Sunny';
+        localStorage.setItem('mode', 'dark');
     }
 
     bw = document.documentElement.clientWidth;
@@ -91,15 +97,15 @@ function toggleDark() {
 function changePic(element) {
     if(element.id == "profile-pic") {
         element.setAttribute('src', "images/profile_les_rose.jpg");
-        document.getElementById('pic-text').textContent = "Me and my beautiful wife, Rose.";
+        document.getElementById('pic-text').textContent = "My beautiful wife, Rose.";
         element.setAttribute('id', "profile-pic2");
     } else if(element.id == "profile-pic2") {
         element.setAttribute('src', "images/profile_banff.jpg");
-        document.getElementById('pic-text').textContent = "Banff National Park";
+        document.getElementById('pic-text').textContent = "Banff";
         element.setAttribute('id', "profile-pic3");
     } else {
         element.setAttribute('src', "images/profile_banff_bw.jpg");
-        document.getElementById('pic-text').textContent = "Banff National Park";
+        document.getElementById('pic-text').textContent = "Banff";
         element.setAttribute('id', "profile-pic");
     }
 }
