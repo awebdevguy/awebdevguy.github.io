@@ -171,7 +171,6 @@ function resetContactForm() {
     document.getElementById("contact-form").reset();
 }
 
-
 function setDisplay(e) {
 
     if(e.target.innerWidth < 800) {

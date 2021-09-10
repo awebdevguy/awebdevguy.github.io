@@ -16,9 +16,10 @@
     --background2: var(--secondaryColor);
 
     --s1s3-title-color: black;
-    --headFootBGColor: black;
-    --headHoverColor: var(--background);
     --headTextColor: var(--mainColor);
+    --headFootBGColor: black;
+    --headHoverColor: var(--background1);
+    --headHoverTextColor: black;
 }
 
 .dark-mode {
@@ -37,8 +38,9 @@
     --background2: url("./images/Slanted-Gradient.svg");
 
     --s1s3-title-color: var(--mainColor);
-    --headHoverColor: rgb(124, 0, 6);
     --headTextColor: var(--mainColor);
+    --headHoverColor: rgb(159, 0, 10);
+    --headHoverTextColor: var(--mainColor);
 }
 
 .bright-mode {
@@ -60,9 +62,10 @@
     --background2: url("./images/Liquid-Cheese.svg");
 
     --s1s3-title-color: black;
-    --headFootBGColor: black;
-    --headHoverColor: var(--background);
     --headTextColor: var(--mainColor);
+    --headFootBGColor: black;
+    --headHoverColor: rgb(255, 187, 44);
+    --headHoverTextColor: black;
 }
 
 * {
@@ -149,6 +152,7 @@ h6 {
 }
 
 #header img {
+    border: none;
     height: 2rem;
     padding: 0 .5rem 0 1rem;
     position: relative;
@@ -160,36 +164,29 @@ h6 {
     padding: 0;
 }
   
-  /* Hide nav menu links except logo/home */
-#menu{
-    display: none;
-}
-  
 /* Style navigation menu links */
 #header a {
-color: var(--mainColor);
-padding: 1rem;
-text-decoration: none;
-font-size: 17px;
-display: block;
+    color: var(--mainColor);
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
 }
 
 /* Style the hamburger menu */
 #header a.icon {
-display: block;
-position: absolute;
-right: 0;
-top: 0;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 /* Add a background color on mouse-over */
 #header a:hover {
-background-color: var(--headHoverColor);
-color: var(--headTextColor);
-}
-
-#mode {
+    background-color: var(--headHoverColor);
+    color: var(--headHoverTextColor);
     cursor: pointer;
+
 }
 
 .s1, .s3 {
@@ -203,7 +200,8 @@ color: var(--headTextColor);
 .s1, .s2, .s3, .s4 {
     background-repeat: no-repeat;
     background-size: inherit;
-    padding: 5% 15%;
+    /* padding: 5% 15%; */
+    padding: 1rem 0 2rem 0;
 }
 
 .s1s3-title, .section-title, .skills-title {
@@ -216,6 +214,7 @@ color: var(--headTextColor);
 
 .section-title{
     text-align: center;
+    padding-top: 1.5rem;
 }
 
 .main-container {
@@ -256,21 +255,19 @@ color: var(--headTextColor);
 }
 
 .right-column {
-    padding: 4.5em 0 0;   
+    padding: 4.5em 2rem 0 0;   
     grid-area: right-column;
 }
 
 #preview{
-    /* margin: auto; */
-    margin: 0;
-    max-width: 95%;
     min-height: 300px;
-    /* padding: 0 2rem; */
+    padding-right: 15%;
     text-align: center;
 }
 
-#about-me {
-    border-radius: var(--border-radius);
+.about-wrapper {
+    /* border-radius: var(--border-radius); */
+    padding: 0 15%;
 }
 
 .aboutme {
@@ -392,7 +389,7 @@ color: var(--headTextColor);
 #contact-form{
     max-width: 600px;
     display: block;
-    margin: 2em auto auto auto;
+    margin: 2em auto;
     padding: 2em;
     background-color: var(--boxBGColor);
     border: var(--border);
@@ -498,6 +495,7 @@ mark.green {
     }
 
     #header #home-link {
+        /* width: 80%; */
         padding-bottom: .5rem;
     }
     
@@ -505,8 +503,12 @@ mark.green {
         display: block;
     }
 
-    #preview {
-        padding: 0 1rem 1rem 1rem;
+    .menu-item {
+        flex-grow: 1;
+    }
+
+    .right-column, #preview {
+        padding: 0;
     }
 
     .intro-wrapper{
