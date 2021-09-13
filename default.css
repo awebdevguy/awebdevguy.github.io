@@ -266,7 +266,6 @@ h6 {
 }
 
 .about-wrapper {
-    /* border-radius: var(--border-radius); */
     padding: 0 15%;
 }
 
@@ -539,6 +538,10 @@ mark.green {
 
     .s1, .s2, .s3, .s4 {
         padding: 2rem 1rem 1rem;
+    }
+
+    .about-wrapper {
+        padding: 0;
     }
 
     #contact-form {
