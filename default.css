@@ -97,7 +97,15 @@ p {
     padding-bottom: 1rem;
 }
 
-h1,
+.title {
+  color: white;
+  font-family: 'Barlow', sans-serif;
+  position: absolute;
+  top: 50%;
+  margin: auto;
+  /* font-size: 4rem; */
+}
+
 h2,
 h3,
 h4,
@@ -147,6 +155,7 @@ h6 {
     background-color: var(--headFootBGColor);
     position: sticky;
     top: 0;
+    z-index: 10;
     border: var(--border);
     box-shadow: var(--box-shadow);
 }
@@ -189,7 +198,15 @@ h6 {
 
 }
 
-.s1, .s3 {
+.s1 {
+    background-image: url('/images/banffscene3.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 1200px;
+}
+
+.s3 {
     background: var(--background1);
 }
 
@@ -229,7 +246,7 @@ h6 {
     align-content: center;
 }
 
-.intro-wrapper {
+/* .intro-wrapper {
     background-color: transparent;
     border-radius: var(--border-radius);
     display: grid;
@@ -241,6 +258,10 @@ h6 {
 .left-column {
     grid-area: left-column;
     padding: 4.5em 0 0;
+}
+
+.left-column p {
+  color: black;
 }
 
 .profile-pic{
@@ -259,11 +280,21 @@ h6 {
     grid-area: right-column;
 }
 
+.right-column p {
+  font-weight: 600;
+  color: black;
+}
+
+.right-column h3 {
+  margin-top: 0;
+  color: black;
+}
+
 #preview{
     min-height: 300px;
     padding-right: 15%;
     text-align: center;
-}
+} */
 
 .about-wrapper {
     padding: 0 15%;
@@ -542,6 +573,10 @@ mark.green {
 
     .about-wrapper {
         padding: 0;
+    }
+
+    .project {
+      margin: .5rem 0;
     }
 
     #contact-form {

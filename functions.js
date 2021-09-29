@@ -71,17 +71,17 @@ function toggleMode() {
     if(document.body.classList.contains("dark-mode")) {
         document.body.classList.remove("dark-mode");
         document.body.classList.add("bright-mode");
-        document.getElementById('profile-pic').setAttribute('src', "images/profile_banff.jpg");
+        // document.getElementById('profile-pic').setAttribute('src', "images/profile_banff.jpg");
         document.getElementById('mode').innerText = 'Bland';
         localStorage.setItem('mode', 'sunny');
     } else if(document.body.classList.contains("bright-mode")) {
         document.body.classList.remove("bright-mode");
-        document.getElementById('profile-pic').setAttribute('src', "images/profile_banff_bw.jpg");
+        // document.getElementById('profile-pic').setAttribute('src', "images/profile_banff_bw.jpg");
         document.getElementById('mode').innerText = 'Dark';
         localStorage.setItem('mode', 'bland');
     } else {
         document.body.classList.add("dark-mode");
-        document.getElementById('profile-pic').setAttribute('src', "images/profile_banff.jpg");
+        // document.getElementById('profile-pic').setAttribute('src', "images/profile_banff.jpg");
         document.getElementById('mode').innerText = 'Sunny';
         localStorage.setItem('mode', 'dark');
     }
