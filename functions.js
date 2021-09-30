@@ -66,31 +66,53 @@ function displayNone() {
 }
 
 // Switch between two themes.
+// function toggleMode() {
+
+//     if(document.body.classList.contains("dark-mode")) {
+//         document.body.classList.remove("dark-mode");
+//         document.body.classList.add("bright-mode");
+//         // document.getElementById('profile-pic').setAttribute('src', "images/profile_banff.jpg");
+//         document.getElementById('mode').innerText = 'Bland';
+//         localStorage.setItem('mode', 'sunny');
+//     } else if(document.body.classList.contains("bright-mode")) {
+//         document.body.classList.remove("bright-mode");
+//         // document.getElementById('profile-pic').setAttribute('src', "images/profile_banff_bw.jpg");
+//         document.getElementById('mode').innerText = 'Dark';
+//         localStorage.setItem('mode', 'bland');
+//     } else {
+//         document.body.classList.add("dark-mode");
+//         // document.getElementById('profile-pic').setAttribute('src', "images/profile_banff.jpg");
+//         document.getElementById('mode').innerText = 'Sunny';
+//         localStorage.setItem('mode', 'dark');
+//     }
+
+//     bw = document.documentElement.clientWidth;
+    
+//     if(bw < 800) {
+//         hideMenu();
+//     }
+// }
+
+// Switch light and dark themes
 function toggleMode() {
 
-    if(document.body.classList.contains("dark-mode")) {
-        document.body.classList.remove("dark-mode");
-        document.body.classList.add("bright-mode");
-        document.getElementById('profile-pic').setAttribute('src', "images/profile_banff.jpg");
-        document.getElementById('mode').innerText = 'Bland';
-        localStorage.setItem('mode', 'sunny');
-    } else if(document.body.classList.contains("bright-mode")) {
-        document.body.classList.remove("bright-mode");
-        document.getElementById('profile-pic').setAttribute('src', "images/profile_banff_bw.jpg");
-        document.getElementById('mode').innerText = 'Dark';
-        localStorage.setItem('mode', 'bland');
-    } else {
-        document.body.classList.add("dark-mode");
-        document.getElementById('profile-pic').setAttribute('src', "images/profile_banff.jpg");
-        document.getElementById('mode').innerText = 'Sunny';
-        localStorage.setItem('mode', 'dark');
-    }
+  if(document.body.classList.contains("dark-mode")) {
+      document.body.classList.remove("dark-mode");
+      document.getElementById('mode').innerText = 'Dark';
+      document.getElementById('home').setAttribute('style', "background: url('images/pexels-desk.jpg'); background-repeat: no-repeat; background-size: cover; height: 1000px;");
+      localStorage.setItem('mode', 'light');
+  } else {
+      document.body.classList.add("dark-mode");
+      document.getElementById('mode').innerText = 'Light';
+      document.getElementById('home').setAttribute('style', "background: url('images/pexels-big-moon.jpg'); background-repeat: no-repeat; background-size: cover; height: 1000px;");
+      localStorage.setItem('mode', 'dark');
+  } 
 
-    bw = document.documentElement.clientWidth;
-    
-    if(bw < 800) {
-        hideMenu();
-    }
+  bw = document.documentElement.clientWidth;
+  
+  if(bw < 800) {
+      hideMenu();
+  }
 }
 
 // Toggle picture, not really intended, like an easter egg.

@@ -97,7 +97,16 @@ p {
     padding-bottom: 1rem;
 }
 
-h1,
+.title {
+  color: var(--mainText);
+  font-family: 'Barlow', sans-serif;
+  /* position: absolute; */
+  /* top: 50%; */
+  margin: auto;
+  /* padding-top: 3rem; */
+  /* font-size: 4rem; */
+}
+
 h2,
 h3,
 h4,
@@ -147,6 +156,7 @@ h6 {
     background-color: var(--headFootBGColor);
     position: sticky;
     top: 0;
+    z-index: 10;
     border: var(--border);
     box-shadow: var(--box-shadow);
 }
@@ -189,7 +199,14 @@ h6 {
 
 }
 
-.s1, .s3 {
+#home {
+    background: url('/images/pexels-desk.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+}
+
+.s3 {
     background: var(--background1);
 }
 
@@ -229,7 +246,7 @@ h6 {
     align-content: center;
 }
 
-.intro-wrapper {
+/* .intro-wrapper {
     background-color: transparent;
     border-radius: var(--border-radius);
     display: grid;
@@ -241,6 +258,10 @@ h6 {
 .left-column {
     grid-area: left-column;
     padding: 4.5em 0 0;
+}
+
+.left-column p {
+  color: black;
 }
 
 .profile-pic{
@@ -259,14 +280,25 @@ h6 {
     grid-area: right-column;
 }
 
+.right-column p {
+  font-weight: 600;
+  color: black;
+}
+
+.right-column h3 {
+  margin-top: 0;
+  color: black;
+}
+
 #preview{
     min-height: 300px;
     padding-right: 15%;
     text-align: center;
-}
+} */
 
 .about-wrapper {
     padding: 0 15%;
+    text-align: justify;
 }
 
 .aboutme {
@@ -445,6 +477,18 @@ h6 {
     margin-left: .5em;
 }
 
+/* #s5 {
+  width: auto;
+  height: 100%;
+  padding: 3rem;
+}
+
+#resume-frame {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+} */
+
 footer h6{
     line-height: 2em;
     position: static;
@@ -542,6 +586,10 @@ mark.green {
 
     .about-wrapper {
         padding: 0;
+    }
+
+    .project {
+      margin: .5rem 0;
     }
 
     #contact-form {
