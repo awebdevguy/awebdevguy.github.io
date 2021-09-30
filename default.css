@@ -203,6 +203,7 @@ h6 {
     background: url('/images/pexels-desk.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    /* background-position: center center; */
     height: 1000px;
 }
 
@@ -235,8 +236,10 @@ h6 {
 }
 
 .main-container {
-    width: 1200px;
-    height: 100%;
+  width: 100vw;
+    /* width: 1200px; */
+    height: auto;
+    /* height: 100%; */
     margin: auto;
 }
 
@@ -298,7 +301,7 @@ h6 {
 
 .about-wrapper {
     padding: 0 15%;
-    text-align: justify;
+    /* text-align: justify; */
 }
 
 .aboutme {
@@ -582,6 +585,11 @@ mark.green {
 
     .s1, .s2, .s3, .s4 {
         padding: 2rem 1rem 1rem;
+    }
+
+    #home {
+      width: 100vw;
+      height: auto;
     }
 
     .about-wrapper {
