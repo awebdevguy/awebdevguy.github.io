@@ -20,6 +20,8 @@
     --headFootBGColor: black;
     --headHoverColor: var(--background1);
     --headHoverTextColor: black;
+
+    --s4-background: url('/images/pexels-office.jpg');
 }
 
 .dark-mode {
@@ -41,6 +43,8 @@
     --headTextColor: var(--mainColor);
     --headHoverColor: rgb(159, 0, 10);
     --headHoverTextColor: var(--mainColor);
+
+    --s4-background: var(--background1);
 }
 
 .bright-mode {
@@ -211,8 +215,22 @@ h6 {
     background: var(--background1);
 }
 
-.s2, .s4 {
+/* .s2, .s4 {
     background: var(--background2);
+} */
+
+.s2 {
+  background: var(--background2);
+}
+
+.s4 {
+
+  /* background: url('/images/pexels-office.jpg'); */
+  background: var(--s4-background);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center center; */
+  height: 850px;
 }
 
 .s1, .s2, .s3, .s4 {
@@ -416,8 +434,13 @@ h6 {
     cursor: pointer;
 }
 
+/* #contact-title {
+  color: var(--s4-title-color);
+} */
+
 #email-link {
     color: var(--emailAddressColor);
+    /* color: var(--s4-link-color); */
 }
 
 #contact-form{
@@ -429,6 +452,7 @@ h6 {
     border: var(--border);
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
+    /* opacity: 0.8; */
 }
 
 .input-field{
@@ -479,18 +503,6 @@ h6 {
 #submit-btn {
     margin-left: .5em;
 }
-
-/* #s5 {
-  width: auto;
-  height: 100%;
-  padding: 3rem;
-}
-
-#resume-frame {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-} */
 
 footer h6{
     line-height: 2em;
@@ -583,8 +595,17 @@ mark.green {
 
 @media screen and (max-width: 400px) {
 
+    .title {
+      padding-top: 0;
+      font-size: 3rem;
+    }
+
     .s1, .s2, .s3, .s4 {
         padding: 2rem 1rem 1rem;
+    }
+
+    .s4 {
+      height: auto;
     }
 
     .about-wrapper {
