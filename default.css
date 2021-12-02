@@ -267,6 +267,10 @@ h6 {
     align-content: center;
 }
 
+#greeting2 {
+  margin-top: 0;
+}
+
 /* .intro-wrapper {
     background-color: transparent;
     border-radius: var(--border-radius);
