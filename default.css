@@ -267,8 +267,15 @@ h6 {
     align-content: center;
 }
 
+#greeting1 {
+  font-size: 6rem;
+}
+
 #greeting2 {
-  margin-top: 0;
+  margin-top: .5rem;
+  font-size: 2rem;
+  font-weight: 500;
+  color: rgb(201, 79, 31);
 }
 
 /* .intro-wrapper {
