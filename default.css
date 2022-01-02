@@ -161,8 +161,9 @@ h6 {
     position: sticky;
     top: 0;
     z-index: 10;
-    border: var(--border);
-    box-shadow: var(--box-shadow);
+    opacity: 0.85;
+    /* border: var(--border); */
+    /* box-shadow: var(--box-shadow); */
 }
 
 #header img {
