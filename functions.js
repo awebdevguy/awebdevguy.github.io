@@ -5,9 +5,14 @@ var m = document.getElementById("menu");
 var h = document.getElementById("header");
 var bw = document.documentElement.clientWidth;
 var hamburger = document.getElementById("hamburger");
+const home = document.getElementById('home-link');
+const greetingElement = document.getElementById('greeting2');
+const greeting = 'a web developer...';
+let index = 1;
 
 // Display of menu on load depends on current screen size.
 hideMenu();
+scrollGreeting();  // Scrolls out the greeting one letter at a time.
  
 function toggleMenu() {  
     
@@ -89,6 +94,7 @@ function toggleMode() {
 
 // Toggle picture, not really intended, like an easter egg.
 function changePic(element) {
+
     if(element.id == "profile-pic") {
         element.setAttribute('src', "images/profile_les_rose.jpg");
         document.getElementById('pic-text').textContent = "My beautiful wife, Rose.";
@@ -177,4 +183,19 @@ function setDisplay(e) {
 
 window.addEventListener('resize', (e) => {
     setDisplay(e);
-})
+});
+
+// Scrolls out the greeting one letter at a time
+function scrollGreeting() {
+
+  greetingElement.innerText = greeting.slice(0, index);
+
+  if(index < greeting.length) {
+      setTimeout(scrollGreeting, 150);
+      index++;
+  } else {
+    index = 1;
+  }
+}
+
+home.addEventListener('click', () => scrollGreeting());
