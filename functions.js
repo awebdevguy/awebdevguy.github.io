@@ -8,7 +8,7 @@ var hamburger = document.getElementById("hamburger");
 const home = document.getElementById('home-link');
 const greetingElement = document.getElementById('greeting2');
 const greeting = 'a web developer...';
-let index = 1;
+let index = 0;
 
 // Display of menu on load depends on current screen size.
 hideMenu();
