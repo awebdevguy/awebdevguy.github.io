@@ -151,6 +151,9 @@ window.addEventListener( "load", function () {
     
         // Set up our request
         XHR.open( "POST", "https://script.google.com/macros/s/AKfycbzTN3_iPrRxlNFQArGG0IBDx5pZQvg-gkDDos3vTzsV90PfJp9O--FimoO72RJA04eY/exec");
+
+        // CORS Policy
+        XHR.setRequestHeader('Access-Control-Allow-Origin', '*');
     
         // The data sent is what the user provided in the form
         XHR.send( FD );
